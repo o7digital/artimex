@@ -1,0 +1,18 @@
+{
+  "name": "artimex-bakery-premium",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/react": "^6.0.5",
+    "astro": "^7.2.10",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}

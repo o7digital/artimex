@@ -1,0 +1,63 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title,
+  description = 'Artimex Artisan Mexican Bakery — authentic Mexican breads, fresh for retail and frozen ready-to-bake for wholesale.',
+  image = '/images/hero-premium.png'
+} = Astro.props;
+
+const configuredSite = import.meta.env.PUBLIC_SITE_URL;
+const canonical = configuredSite ? new URL(Astro.url.pathname, configuredSite).toString() : undefined;
+const socialImage = configuredSite ? new URL(image, configuredSite).toString() : image;
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Bakery',
+  name: 'Artimex Artisan Mexican Bakery',
+  description,
+  image: socialImage,
+  telephone: '+1-562-777-0924',
+  email: 'sales@artimex.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '12764 Florence Avenue',
+    addressLocality: 'Santa Fe Springs',
+    addressRegion: 'CA',
+    postalCode: '90670',
+    addressCountry: 'US'
+  },
+  ...(canonical && { url: canonical })
+};
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#17110d" />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Artimex Bakery" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImage} />
+    {canonical && <meta property="og:url" content={canonical} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

@@ -578,10 +578,10 @@ em { font-weight: 400; color: var(--orange); }
     radial-gradient(circle at 5% 5%, rgba(255,255,255,.14), transparent 40%),
     var(--orange);
 }
-.contact-copy .eyebrow { color: #4f180c; }
+.contact-copy .eyebrow { color: #f4d38a; }
 .contact h2 { max-width: 700px; }
 .contact h2 em { color: white; font-style: italic; }
-.contact-copy > p:last-child { max-width: 560px; margin: 30px 0 0; color: rgba(255,255,255,.82); font-size: 14px; line-height: 1.65; }
+.contact-copy > p:last-child { max-width: 560px; margin: 30px 0 0; color: #fff8ef; font-size: 14px; line-height: 1.65; }
 .contact-actions { background: #24150f; color: var(--cream); padding: 44px; display: flex; flex-direction: column; justify-content: center; }
 .contact-actions > * { min-height: 110px; border-bottom: 1px solid var(--line-light); padding: 23px 0; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8px 20px; }
 .contact-actions > *:first-child { border-top: 1px solid var(--line-light); }
@@ -707,9 +707,9 @@ em { font-weight: 400; color: var(--orange); }
 .frozen-program { display: grid; grid-template-columns: .9fr 1.1fr; min-height: 600px; background: #eee4d3; }
 .frozen-intro { padding: 70px 5vw; background: #811428; color: var(--cream); }
 .frozen-intro h3 { max-width: 620px; margin: 26px 0 30px; font-family: var(--serif); font-size: clamp(48px, 4.5vw, 76px); font-weight: 400; line-height: .92; letter-spacing: -.05em; }
-.frozen-intro > p:not(.eyebrow) { max-width: 600px; color: rgba(255,255,255,.8); font-size: 14px; line-height: 1.7; }
+.frozen-intro > p:not(.eyebrow) { max-width: 600px; color: #fff6eb; font-size: 14px; line-height: 1.7; }
 .frozen-intro ul { margin: 28px 0 34px; padding: 0; list-style: none; }
-.frozen-intro li { margin: 14px 0; color: rgba(255,255,255,.9); font-size: 11px; }
+.frozen-intro li { margin: 14px 0; color: #fffaf2; font-size: 11px; }
 .frozen-intro li::before { content: "✓"; margin-right: 14px; color: #efbc62; }
 .frozen-list { padding: 38px 36px; }
 .frozen-list > button { width: 100%; min-height: 120px; padding: 20px 0; display: grid; grid-template-columns: 48px minmax(190px,1fr) 145px 120px 22px; gap: 16px; align-items: center; border: 0; border-bottom: 1px solid #d2c6b3; background: transparent; text-align: left; cursor: pointer; }
@@ -878,7 +878,7 @@ em { font-weight: 400; color: var(--orange); }
   .hero-visual { height: 650px; margin: 0 8vw 70px; }
   .journeys { grid-template-columns: 1fr; }
   .journeys article { min-height: 480px; }
-  .story { background: linear-gradient(#811428 0 48%, #eadfc9 48%); }
+  .story { background: #eadfc9; }
   .heritage { grid-template-columns: 1fr; }
   .heritage-gallery { min-height: 620px; }
   .production-stats { grid-template-columns: repeat(2,1fr); }

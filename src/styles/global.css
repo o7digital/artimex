@@ -689,6 +689,53 @@ em { font-weight: 400; color: var(--orange); }
   .footer { padding: 35px 22px; }
 }
 
+/* Product presentation based on the approved Fresh / Frozen references. */
+.editorial-products { gap: 22px; }
+.editorial-products .product-card { border: 1px solid #e2d9c9; }
+.editorial-products .product-image-wrap { aspect-ratio: 1.2; padding: 28px; background: #f0ead9; }
+.editorial-products .product-image-wrap img { object-fit: contain; transform: none; filter: none; }
+.editorial-products .product-image-wrap::after { display: none; }
+.editorial-products .product-image-wrap .product-number { inset: 17px auto auto 18px; padding: 0; background: transparent; color: var(--ink); border-radius: 0; font-size: 9px; }
+.editorial-products .product-image-wrap i { position: absolute; z-index: 2; right: 14px; bottom: 14px; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; background: #821426; color: white; font-style: normal; font-size: 17px; }
+.editorial-products .product-copy { padding: 0; }
+.editorial-products .product-title-row { min-height: 112px; padding: 22px; display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; }
+.editorial-products .product-title-row h4 { font-size: 25px; }
+.editorial-products .product-title-row p { min-height: 0; margin: 8px 0 0; color: var(--muted); font-size: 10px; }
+.editorial-products .product-title-row small { max-width: 90px; color: #7c6c60; text-align: right; font-size: 8px; line-height: 1.4; letter-spacing: .1em; text-transform: uppercase; }
+.editorial-products .product-copy > button { padding: 14px 20px; border-top: 1px solid #ded4c3; }
+
+.frozen-program { display: grid; grid-template-columns: .9fr 1.1fr; min-height: 600px; background: #eee4d3; }
+.frozen-intro { padding: 70px 5vw; background: #811428; color: var(--cream); }
+.frozen-intro h3 { max-width: 620px; margin: 26px 0 30px; font-family: var(--serif); font-size: clamp(48px, 4.5vw, 76px); font-weight: 400; line-height: .92; letter-spacing: -.05em; }
+.frozen-intro > p:not(.eyebrow) { max-width: 600px; color: rgba(255,255,255,.8); font-size: 14px; line-height: 1.7; }
+.frozen-intro ul { margin: 28px 0 34px; padding: 0; list-style: none; }
+.frozen-intro li { margin: 14px 0; color: rgba(255,255,255,.9); font-size: 11px; }
+.frozen-intro li::before { content: "✓"; margin-right: 14px; color: #efbc62; }
+.frozen-list { padding: 38px 36px; }
+.frozen-list > button { width: 100%; min-height: 120px; padding: 20px 0; display: grid; grid-template-columns: 48px minmax(190px,1fr) 145px 120px 22px; gap: 16px; align-items: center; border: 0; border-bottom: 1px solid #d2c6b3; background: transparent; text-align: left; cursor: pointer; }
+.frozen-list > button:hover { background: rgba(255,255,255,.32); }
+.frozen-number { color: #b91f35; font-family: var(--serif); font-style: italic; font-size: 13px; }
+.frozen-name { display: flex; flex-direction: column; gap: 7px; }
+.frozen-name strong { font-family: var(--serif); font-size: 21px; font-weight: 400; }
+.frozen-name small, .frozen-stat small { color: #8c7c6f; font-size: 8px; text-transform: uppercase; letter-spacing: .08em; }
+.frozen-stat { display: flex; flex-direction: column; gap: 7px; }
+.frozen-stat strong { font-size: 10px; line-height: 1.45; }
+.frozen-list b { font-family: var(--serif); font-size: 27px; font-weight: 400; }
+
+@media (max-width: 900px) {
+  .frozen-program { grid-template-columns: 1fr; }
+  .frozen-list { padding: 20px 24px 35px; }
+}
+@media (max-width: 650px) {
+  .editorial-products .product-image-wrap { padding: 22px; }
+  .frozen-intro { padding: 58px 25px; }
+  .frozen-list { padding: 8px 20px 26px; }
+  .frozen-list > button { grid-template-columns: 32px 1fr 72px 16px; gap: 9px; }
+  .frozen-list .frozen-stat:nth-of-type(4) { display: none; }
+  .frozen-name strong { font-size: 18px; }
+  .frozen-stat strong { font-size: 8px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }

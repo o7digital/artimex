@@ -856,7 +856,7 @@ em { font-weight: 400; color: var(--orange); }
 .wholesale-grid article { border: 0; border-radius: 0; background: transparent; backdrop-filter: none; }
 .contact-card { border-radius: 0; background: #811428; }
 .contact-copy { background: #811428; }
-.footer { background: #811428; color: var(--cream); border-top: 1px solid rgba(255,255,255,.18); }
+.footer { background: #1c120e; color: var(--cream); border-top: 1px solid rgba(255,255,255,.18); }
 .footer > p, .footer > small { color: #fff3e8; }
 .footer-links a { color: #fffaf2; }
 .contact-actions > * { border-bottom-color: rgba(255,255,255,.3); }

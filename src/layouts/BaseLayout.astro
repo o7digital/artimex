@@ -5,12 +5,14 @@ interface Props {
   title: string;
   description?: string;
   image?: string;
+  lang?: 'en' | 'es';
 }
 
 const {
   title,
   description = 'Artimex Artisan Mexican Bakery — authentic Mexican breads, fresh for retail and frozen ready-to-bake for wholesale.',
-  image = '/images/hero-premium.png'
+  image = '/images/hero-premium.png',
+  lang = 'en'
 } = Astro.props;
 
 const configuredSite = import.meta.env.PUBLIC_SITE_URL;
@@ -36,13 +38,16 @@ const structuredData = {
 };
 ---
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#17110d" />
     {canonical && <link rel="canonical" href={canonical} />}
+    {configuredSite && <link rel="alternate" hreflang="en" href={new URL('/', configuredSite)} />}
+    {configuredSite && <link rel="alternate" hreflang="es" href={new URL('/es/', configuredSite)} />}
+    {configuredSite && <link rel="alternate" hreflang="x-default" href={new URL('/', configuredSite)} />}
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Artimex Bakery" />
     <meta property="og:title" content={title} />

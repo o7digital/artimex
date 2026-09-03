@@ -32,10 +32,15 @@ Set `PUBLIC_SITE_URL` to the final public origin (for example `https://www.examp
 
 ## Main files
 - `src/pages/index.astro` — full landing/storefront page
+- `src/pages/es/index.astro` — Spanish route using the shared storefront
+- `src/components/HomePage.astro` — shared bilingual editorial page
 - `src/components/ShopExperience.jsx` — B2C/B2B interactive catalog mockup
 - `src/data/products.js` — backend-ready catalog data boundary
 - `src/styles/global.css` — full premium visual system
 - `public/images/` — bundled bakery visuals
+
+## Brand archive
+The assets in `public/images/original/` were recovered from the existing official Artimex website and are served in optimized WebP format where possible. Original source files are retained for brand fidelity.
 
 ## Next production step
 The shopping buttons are intentionally front-end demo interactions. Connect them to your preferred commerce backend (WooCommerce REST API, Shopify Storefront API, Medusa, Stripe Checkout, etc.) when you are ready.

@@ -1,0 +1,8 @@
+---
+interface Props { compact?: boolean; }
+const { compact = false } = Astro.props;
+---
+<span class:list={['official-brand', { compact }]} aria-hidden="true">
+  <img src="/images/original/artimex-official-header.webp" alt="" width="865" height="186" />
+</span>
+<span class="sr-only">Artimex Artisan Mexican Bakery</span>

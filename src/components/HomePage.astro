@@ -1,0 +1,102 @@
+---
+import BrandLogo from './BrandLogo.astro';
+import ShopExperience from './ShopExperience.jsx';
+
+interface Props { lang: 'en' | 'es'; }
+const { lang } = Astro.props;
+const es = lang === 'es';
+const localePath = es ? '/es/' : '/';
+const otherPath = es ? '/' : '/es/';
+const c = es ? {
+  announcement: 'Panadería mexicana auténtica • Sur de California', wholesale: 'Mayoreo y foodservice',
+  home: 'Inicio', story: 'Nuestra historia', fresh: 'Fresco / B2C', frozen: 'Congelado / B2B', products: 'Productos', contact: 'Contacto', shop: 'Comprar pan', menu: 'Menú', close: 'Cerrar', language: 'EN',
+  heroEye: 'Autenticidad • Tradición • Ingredientes superiores', heroTitle: 'Pan mexicano,', heroEm: 'hecho para llegar más lejos.',
+  heroLead: 'Panes y pasteles artesanales con el sabor, la textura y el espíritu de una auténtica panadería — frescos para hoy, congelados y listos para hornear a escala.',
+  shopFresh: 'Comprar fresco', explore: 'Ver mayoreo', freshMeta: 'Selección fresca B2C', frozenMeta: 'Programa B2B listo para hornear', authentic: 'Auténtico', authenticMeta: 'Recetas y oficio mexicano', badge: 'Hecho para la vitrina. Diseñado para ser consistente.', script: 'Pan hecho con corazón.',
+  twoWays: 'Dos formas de disfrutar Artimex', shopTitle: 'Fresco para la mesa.', shopEm: 'Congelado para el negocio.', shopIntro: 'Una misma filosofía de producto, dos experiencias. El consumidor elige pan recién preparado; restaurantes y mercados construyen pedidos profesionales listos para hornear.',
+  standard: 'El estándar Artimex', hands: 'Manos. Mente.', heart: 'Corazón.',
+  storyLead: 'Hacemos pan mexicano como un oficio: ingredientes correctos, fermentación precisa, calor exacto y la disciplina para que cada lote honre la tradición.',
+  p1: 'Autenticidad', p1d: 'Panes mexicanos clásicos con sabor, forma y textura reconocibles.', p2: 'Consistencia', p2d: 'Un programa repetible diseñado para resultados confiables cada día.', p3: 'Ingredientes superiores', p3d: 'La calidad comienza antes del horno, con una mejor base y un manejo cuidadoso.', caption: 'Forma tradicional.\nConsistencia moderna.',
+  heritage: 'Del archivo original de Artimex', heritageTitle: 'Una tradición que', heritageEm: 'sigue creciendo.', heritageText: 'Estas imágenes pertenecen a la historia visual de Artimex: panes hechos con oficio, color y generosidad desde el origen de la marca.',
+  business: 'Artimex para negocios', businessTitle: 'Tu programa de panadería,', businessEm: 'sin complicaciones.', businessLead: 'Los productos congelados listos para hornear ayudan a restaurantes, supermercados y operadores a ampliar su surtido reduciendo mano de obra, merma y complejidad diaria.',
+  w1: 'Menos presión laboral', w1d: 'Ofrece una selección mexicana auténtica sin formar un equipo completo de panadería.', w2: 'Producción predecible', w2d: 'Productos estandarizados para una cocción, rendimiento y presentación más consistentes.', w3: 'Control de merma', w3d: 'Hornea según la demanda y conserva un surtido más amplio con menor exposición.', access: 'Solicitar acceso mayorista', sales: 'Hablar con ventas',
+  freezer: 'Del congelador a la vitrina', path: 'Un camino más simple hacia', bake: 'un mejor horneado.', stock: 'Almacena', stockD: 'Conserva el surtido principal congelado hasta que la operación lo necesite.', prepare: 'Prepara', prepareD: 'Sigue el proceso específico de descongelación, fermentación o preparación.', bakeStep: 'Hornea', bakeD: 'Termina en tu horno para lograr aroma, textura y presencia de vitrina.', sell: 'Vende', sellD: 'Ofrece auténtico pan mexicano con menos fricción operativa.',
+  contactEye: 'Pan fresco • Mayoreo • Foodservice', bring: 'Lleva Artimex', table: 'a tu mesa.', contactText: 'Para pedidos, programas mayoristas, distribución o un surtido foodservice a la medida, habla con el equipo Artimex.', email: 'Correo de ventas', call: 'Llámanos', visit: 'Visítanos', footer: 'Pan mexicano auténtico, hecho con oficio y creado para ser consistente.',
+} : {
+  announcement: 'Authentic Mexican bakery • Southern California', wholesale: 'Wholesale & foodservice',
+  home: 'Home', story: 'Our story', fresh: 'Fresh / B2C', frozen: 'Frozen / B2B', products: 'Products', contact: 'Contact', shop: 'Shop the bakery', menu: 'Menu', close: 'Close', language: 'ES',
+  heroEye: 'Authenticity • Tradition • Superior ingredients', heroTitle: 'Mexican baking,', heroEm: 'made to move.',
+  heroLead: 'Artisan breads and pastries made with the flavor, texture and spirit of a real panadería — fresh for today, frozen and ready-to-bake for scale.',
+  shopFresh: 'Shop fresh', explore: 'Explore wholesale', freshMeta: 'B2C bakery assortment', frozenMeta: 'B2B ready-to-bake program', authentic: 'Authentic', authenticMeta: 'Mexican recipes & craft', badge: 'Made for the bakery case. Engineered for consistency.', script: 'Pan hecho con corazón.',
+  twoWays: 'Two ways to enjoy Artimex', shopTitle: 'Fresh for the table.', shopEm: 'Frozen for the business.', shopIntro: 'One product philosophy, two eCommerce journeys. Customers can buy freshly prepared bakery items, while restaurants and markets can build wholesale ready-to-bake orders.',
+  standard: 'The Artimex standard', hands: 'Hands. Head.', heart: 'Heart.', storyLead: 'We approach Mexican baking as a craft: the right ingredients, the right fermentation, the right heat — and the discipline to make every batch worthy of the tradition behind it.',
+  p1: 'Authenticity', p1d: 'Classic Mexican breads with recognizable flavor, shape and texture.', p2: 'Consistency', p2d: 'A repeatable bakery program designed for dependable daily results.', p3: 'Superior ingredients', p3d: 'Quality starts before the oven — with a better base and careful handling.', caption: 'Traditional form.\nModern consistency.',
+  heritage: 'From the original Artimex archive', heritageTitle: 'A tradition that', heritageEm: 'keeps moving forward.', heritageText: 'These images belong to the visual history of Artimex: breads made with craft, color and generosity since the brand’s earliest days.',
+  business: 'Artimex for business', businessTitle: 'Your bakery program,', businessEm: 'without the bakery headache.', businessLead: 'Frozen, ready-to-bake products help restaurants, grocers and foodservice operators expand assortment while reducing skilled labor pressure, waste and day-to-day complexity.',
+  w1: 'Lower labor pressure', w1d: 'Serve an authentic Mexican bakery assortment without building a full scratch bakery team.', w2: 'Predictable output', w2d: 'Standardized products give your operation a more consistent bake, yield and presentation.', w3: 'Control waste', w3d: 'Bake closer to demand and keep a broader assortment available with less finished-product exposure.', access: 'Request wholesale access', sales: 'Talk to sales',
+  freezer: 'From freezer to bakery case', path: 'A simpler path to', bake: 'a better bake.', stock: 'Stock', stockD: 'Keep your core assortment frozen until the operation needs it.', prepare: 'Prepare', prepareD: 'Follow the product-specific thaw, proof or staging process.', bakeStep: 'Bake', bakeD: 'Finish in your oven for fresh aroma, texture and bakery-case appeal.', sell: 'Sell', sellD: 'Offer authentic pan mexicano with less operational friction.',
+  contactEye: 'Fresh bakery • Wholesale • Foodservice', bring: 'Bring Artimex', table: 'to your table.', contactText: 'For retail orders, wholesale programs, distribution questions or a custom foodservice assortment, talk with the Artimex team.', email: 'Email sales', call: 'Call us', visit: 'Visit', footer: 'Authentic Mexican bread, made with craft and built for consistency.',
+};
+const nav = [[c.home, '#top'], [c.story, '#story'], [c.fresh, '#fresh-products'], [c.frozen, '#frozen-products'], [c.products, '#shop'], [c.contact, '#contact']];
+---
+<div class="site-shell" id="top">
+  <div class="announcement"><span>{c.announcement}</span><a href="#wholesale">{c.wholesale} <span>↗</span></a></div>
+  <header class="header" data-header>
+    <a class="brand" href={localePath} aria-label="Artimex home"><BrandLogo /></a>
+    <nav class="nav" aria-label="Main navigation">{nav.map(([label, href]) => <a href={href}>{label}</a>)}</nav>
+    <div class="header-actions"><a class="language-link" href={otherPath} hreflang={es ? 'en' : 'es'}>{c.language}</a><a class="header-cta" href="#shop">{c.shop} <span>↗</span></a></div>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label={c.menu}>
+      <span></span><span></span><span></span>
+    </button>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <div class="mobile-menu-top"><a class="brand" href={localePath}><BrandLogo /></a><button class="menu-close" type="button" aria-label={c.close}>×</button></div>
+      <nav aria-label="Mobile navigation">{nav.map(([label, href], index) => <a href={href}><span>0{index + 1}</span>{label}</a>)}</nav>
+      <div class="mobile-menu-foot"><a href={otherPath}>{es ? 'View in English' : 'Ver en español'}</a><a href="mailto:sales@artimex.com">sales@artimex.com</a></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow light">{c.heroEye}</p><h1>{c.heroTitle}<em>{c.heroEm}</em></h1><p class="hero-lead">{c.heroLead}</p>
+        <div class="hero-actions"><a class="button button-primary" href="#fresh-products">{c.shopFresh} <span>↗</span></a><a class="button button-ghost" href="#wholesale">{c.explore}</a></div>
+        <div class="hero-meta"><div><strong>Fresh</strong><span>{c.freshMeta}</span></div><div><strong>Frozen</strong><span>{c.frozenMeta}</span></div><div><strong>{c.authentic}</strong><span>{c.authenticMeta}</span></div></div>
+      </div>
+      <div class="hero-visual"><picture><source srcset="/images/original/artimex-bread-assortment.webp" type="image/webp"/><img src="/images/original/artimex-bread-assortment.jpg" alt={es ? 'Surtido original de panes y pasteles mexicanos Artimex' : 'Original Artimex assortment of Mexican breads and pastries'} width="800" height="868" fetchpriority="high" decoding="async"/></picture><div class="hero-polaroid polaroid-concha"><img src="/images/concha-pink.jpg" alt="" width="440" height="440"/><small>Concha rosa</small></div><div class="hero-polaroid polaroid-empanada"><img src="/images/empanada.jpg" alt="" width="590" height="440"/><small>Empanada</small></div><div class="hero-badge"><strong>130+</strong><p>{es ? 'recetas auténticas' : 'authentic recipes'}</p></div><div class="hero-script">{c.script}</div></div>
+    </section>
+    <section class="marquee" aria-label="Product categories"><div><span>CONCHAS</span><i>✦</i><span>EMPANADAS</span><i>✦</i><span>BOLILLOS</span><i>✦</i><span>CAMPECHANAS</span><i>✦</i><span>PAN DULCE</span><i>✦</i><span>FOODSERVICE</span><i>✦</i></div></section>
+
+    <section class="journeys" aria-label={es ? 'Dos experiencias Artimex' : 'Two Artimex experiences'}>
+      <article class="journey-fresh"><p class="eyebrow light">{es ? 'Para casa y familia' : 'For home & family'}</p><h2>{es ? 'Fresco desde' : 'Fresh from'}<br/>{es ? 'nuestros hornos.' : 'our ovens.'}</h2><p>{es ? 'Arma tu caja con los panes mexicanos que ama tu familia, horneados localmente con ingredientes superiores.' : 'Build your box with the Mexican breads your family loves, baked locally with superior ingredients.'}</p><a href="#fresh-products">{c.shopFresh} <span>→</span></a><b>01</b></article>
+      <article class="journey-frozen"><p class="eyebrow light">{es ? 'Para retail y foodservice' : 'For retail & foodservice'}</p><h2>{es ? 'Tu panadería,' : 'Your bakery,'}<br/>{es ? 'más simple.' : 'made simpler.'}</h2><p>{es ? 'Masa congelada y productos terminados con calidad constante, menor merma y menos mano de obra.' : 'Frozen dough and fully baked programs with dependable quality, lower waste and less labor.'}</p><a href="#frozen-products">{c.explore} <span>→</span></a><b>02</b></article>
+    </section>
+
+    <section class="shop-section section" id="shop"><div class="section-heading"><div><p class="eyebrow">{c.twoWays}</p><h2>{c.shopTitle}<br/><em>{c.shopEm}</em></h2></div><p>{c.shopIntro}</p></div><ShopExperience client:load lang={lang}/></section>
+
+    <section class="story section" id="story"><div class="story-image"><img src="/images/original/artimex-conchas-portrait.webp" alt={es ? 'Conchas originales de Artimex' : 'Original Artimex conchas'} width="300" height="329" loading="lazy" decoding="async"/><div class="story-caption">{c.caption.split('\n').map(line => <>{line}<br/></>)}</div></div><div class="story-copy"><p class="eyebrow">{c.standard}</p><h2>{c.hands}<br/><em>{c.heart}</em></h2><p class="story-lead">{c.storyLead}</p><div class="principles"><article><span>01</span><div><h3>{c.p1}</h3><p>{c.p1d}</p></div></article><article><span>02</span><div><h3>{c.p2}</h3><p>{c.p2d}</p></div></article><article><span>03</span><div><h3>{c.p3}</h3><p>{c.p3d}</p></div></article></div></div></section>
+
+    <section class="heritage section" aria-labelledby="heritage-title"><div class="heritage-copy"><p class="eyebrow">{c.heritage}</p><h2 id="heritage-title">{c.heritageTitle}<br/><em>{c.heritageEm}</em></h2><p>{c.heritageText}</p><a class="text-link dark" href="#shop">{c.products} <span>→</span></a></div><div class="heritage-gallery"><figure class="heritage-main"><img src="/images/original/artimex-bread-assortment.webp" alt={es ? 'Surtido histórico de pan dulce Artimex' : 'Historic Artimex sweet bread assortment'} width="800" height="868" loading="lazy" decoding="async"/></figure><figure><img src="/images/original/artimex-empanadas.webp" alt={es ? 'Empanadas originales Artimex' : 'Original Artimex empanadas'} width="300" height="329" loading="lazy" decoding="async"/></figure></div></section>
+
+    <section class="wholesale" id="wholesale"><div class="wholesale-backdrop"></div><div class="wholesale-inner"><p class="eyebrow light">{c.business}</p><h2>{c.businessTitle}<br/><em>{c.businessEm}</em></h2><p class="wholesale-lead">{c.businessLead}</p><div class="production-stats"><div><strong>25M</strong><span>{es ? 'piezas al año' : 'pieces produced annually'}</span></div><div><strong>1M+</strong><span>{es ? 'capacidad semanal' : 'weekly production capacity'}</span></div><div><strong>3</strong><span>{es ? 'líneas especializadas' : 'specialized production lines'}</span></div><div><strong>6 mo.</strong><span>{es ? 'vida congelada' : 'frozen shelf life'}</span></div></div><div class="wholesale-grid"><article><span>❄</span><h3>{c.w1}</h3><p>{c.w1d}</p></article><article><span>◇</span><h3>{c.w2}</h3><p>{c.w2d}</p></article><article><span>▱</span><h3>{c.w3}</h3><p>{c.w3d}</p></article></div><div class="wholesale-actions"><a class="button button-cream" href="mailto:sales@artimex.com?subject=Wholesale%20Artimex%20Inquiry">{c.access} <span>↗</span></a><a class="text-link" href="#contact">{c.sales} <span>→</span></a></div></div></section>
+
+    <section class="process section"><div class="section-heading compact"><div><p class="eyebrow">{c.freezer}</p><h2>{c.path}<br/><em>{c.bake}</em></h2></div></div><div class="process-track"><article><span>01</span><div><h3>{c.stock}</h3><p>{c.stockD}</p></div></article><article><span>02</span><div><h3>{c.prepare}</h3><p>{c.prepareD}</p></div></article><article><span>03</span><div><h3>{c.bakeStep}</h3><p>{c.bakeD}</p></div></article><article><span>04</span><div><h3>{c.sell}</h3><p>{c.sellD}</p></div></article></div></section>
+
+    <section class="contact section" id="contact"><div class="contact-card"><div class="contact-copy"><p class="eyebrow light">{c.contactEye}</p><h2>{c.bring}<br/><em>{c.table}</em></h2><p>{c.contactText}</p></div><div class="contact-actions"><a href="mailto:sales@artimex.com"><small>{c.email}</small><strong>sales@artimex.com</strong><span>↗</span></a><a href="tel:+15627770924"><small>{c.call}</small><strong>562 777 0924</strong><span>↗</span></a><div><small>{c.visit}</small><strong>12764 Florence Avenue<br/>Santa Fe Springs, CA 90670</strong></div></div></div></section>
+  </main>
+  <footer class="footer"><a class="brand footer-brand" href={localePath}><BrandLogo compact/></a><p>{c.footer}</p><div class="footer-links"><a href="#top">{c.home}</a><a href="#story">{c.story}</a><a href="#fresh-products">Fresh</a><a href="#frozen-products">Frozen</a><a href="#contact">{c.contact}</a></div><small>© {new Date().getFullYear()} Artimex Artisan Mexican Bakery.</small></footer>
+</div>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.mobile-menu');
+  const close = document.querySelector('.menu-close');
+  const setOpen = (open) => {
+    if (!(toggle instanceof HTMLButtonElement) || !(menu instanceof HTMLElement)) return;
+    toggle.setAttribute('aria-expanded', String(open));
+    menu.hidden = !open;
+    document.body.classList.toggle('menu-open', open);
+  };
+  toggle?.addEventListener('click', () => setOpen(true));
+  close?.addEventListener('click', () => setOpen(false));
+  menu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', (event) => { if (event.key === 'Escape') setOpen(false); });
+</script>

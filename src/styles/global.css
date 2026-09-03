@@ -755,7 +755,7 @@ em { font-weight: 400; color: var(--orange); }
 }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 .announcement { min-height: 32px; padding: 7px 4.2vw; background: #7f1426; font-size: 9px; }
-.header { min-height: 116px; padding: 18px 4.2vw; grid-template-columns: 285px 1fr auto; gap: 34px; background: #1c120e; color: var(--cream); border-bottom-color: rgba(255,255,255,.16); }
+.header { min-height: 116px; padding: 18px 4.2vw; grid-template-columns: 285px 1fr auto; gap: 34px; background: #1c120e; color: var(--cream); border-bottom-color: rgba(255,255,255,.16); position: sticky; top: 0; z-index: 80; box-shadow: 0 10px 28px rgba(20,12,8,.16); }
 .official-brand { position: relative; display: block; width: 250px; height: 72px; overflow: hidden; border-radius: 3px; background: #1c120e; }
 .official-brand img { position: absolute; max-width: none; width: 502px; height: auto; left: -260px; top: -1px; }
 .official-brand.compact { width: 225px; height: 66px; }

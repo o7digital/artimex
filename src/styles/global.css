@@ -737,6 +737,10 @@ em { font-weight: 400; color: var(--orange); }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .marquee .marquee-track { animation: none; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
@@ -805,6 +809,10 @@ em { font-weight: 400; color: var(--orange); }
 .polaroid-concha { left: -46px; top: 126px; transform: rotate(-5deg); }
 .polaroid-empanada { right: -39px; bottom: 60px; transform: rotate(5deg); }
 .marquee { background: var(--ink); color: #d8c4a7; }
+.marquee .marquee-track { width: max-content; display: flex; gap: 0; padding: 0; animation: marquee-scroll 30s linear infinite; }
+.marquee .marquee-set { display: flex; align-items: center; gap: 28px; padding-right: 28px; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee-scroll { to { transform: translateX(-50%); } }
 
 .journeys { display: grid; grid-template-columns: 1fr 1fr; color: white; }
 .journeys article { min-height: 560px; padding: 105px 8vw; position: relative; overflow: hidden; }

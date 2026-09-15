@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MarketingPage from '../components/MarketingPage.astro';
+import { pageEntries, productFamilies, type Lang, type LocalizedPage } from '../data/site';
+
+export function getStaticPaths() {
+  const { entries, products } = pageEntries();
+  const regular = entries.map(({ item, lang, content }) => ({ params: { path: content.path.slice(1) }, props: { item, lang } }));
+  const productPages = products.map(({ lang, product, path }) => {
+    const item: LocalizedPage = {
+      key: `product-${product.slug}`,
+      kind: 'product',
+      en: { path: `/products/${product.slug}`, title: `${product.name} | Artimex Products`, description: product.note, eyebrow: 'Artimex products', heading: product.name, intro: product.note },
+      es: { path: `/es/productos/${product.slug}`, title: `${product.esName} | Productos Artimex`, description: product.esNote, eyebrow: 'Productos Artimex', heading: product.esName, intro: product.esNote }
+    };
+    return { params: { path: path.slice(1) }, props: { item, lang, product } };
+  });
+  return [...regular, ...productPages];
+}
+
+interface Props { item: LocalizedPage; lang: Lang; product?: (typeof productFamilies)[number] }
+const { item, lang, product } = Astro.props;
+const content = item[lang];
+const alternatePath = item[lang === 'en' ? 'es' : 'en'].path;
+---
+<BaseLayout title={`${content.title} | Artimex Bakery`} description={content.description} lang={lang} alternatePath={alternatePath}>
+  <MarketingPage item={item} lang={lang} product={product}/>
+</BaseLayout>

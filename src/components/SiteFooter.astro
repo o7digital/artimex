@@ -1,0 +1,13 @@
+---
+import BrandLogo from './BrandLogo.astro';
+import type { Lang } from '../data/site';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const es = lang === 'es';
+---
+<footer class="footer internal-footer">
+  <a class="brand footer-brand" href={es ? '/es/' : '/'}><BrandLogo compact /></a>
+  <p>{es ? 'Pan mexicano auténtico, hecho con oficio y creado para ser consistente.' : 'Authentic Mexican bread, made with craft and built for consistency.'}</p>
+  <div class="footer-links"><a href={es ? '/es/productos' : '/products'}>{es ? 'Productos' : 'Products'}</a><a href={es ? '/es/mayoreo' : '/wholesale'}>{es ? 'Mayoreo' : 'Wholesale'}</a><a href={es ? '/es/venta-al-publico' : '/retail'}>{es ? 'Venta al público' : 'Retail'}</a><a href={es ? '/es/contacto' : '/contact'}>{es ? 'Contacto' : 'Contact'}</a><a href={es ? '/es/privacidad' : '/privacy'}>{es ? 'Privacidad' : 'Privacy'}</a><a href={es ? '/es/terminos' : '/terms'}>{es ? 'Términos' : 'Terms'}</a></div>
+  <small>© {new Date().getFullYear()} Artimex Artisan Mexican Bakery.</small>
+</footer>

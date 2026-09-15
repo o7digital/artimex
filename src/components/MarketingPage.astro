@@ -1,0 +1,45 @@
+---
+import SiteHeader from './SiteHeader.astro';
+import SiteFooter from './SiteFooter.astro';
+import CommercePanel from './CommercePanel';
+import { productFamilies, pickupLocations, translatedPath, type Lang, type LocalizedPage } from '../data/site';
+
+interface Props { item: LocalizedPage; lang: Lang; product?: (typeof productFamilies)[number] }
+const { item, lang, product } = Astro.props;
+const es = lang === 'es';
+const content = item[lang];
+const alternatePath = translatedPath(content.path);
+const wholesaleBase = es ? '/es/mayoreo' : '/wholesale';
+const retailBase = es ? '/es/venta-al-publico' : '/retail';
+const contactPath = es ? '/es/contacto' : '/contact';
+---
+<div class="site-shell internal-site">
+  <SiteHeader lang={lang} alternatePath={alternatePath} />
+  <main>
+    <section class="page-hero">
+      <div><p class="eyebrow">{content.eyebrow}</p><h1>{product ? (es ? product.esName : product.name) : content.heading}</h1><p>{product ? (es ? product.esNote : product.note) : content.intro}</p></div>
+      <figure><img src={product?.image || (item.kind === 'about' ? '/images/original/artimex-bread-assortment.webp' : '/images/original/artimex-conchas-portrait.webp')} alt={product ? `${es ? product.esName : product.name} — Artimex` : (es ? 'Pan mexicano artesanal Artimex' : 'Artimex artisan Mexican bread')} width="800" height="868" /></figure>
+    </section>
+
+    {item.kind === 'about' && <>
+      <section class="content-band"><p class="eyebrow">{es ? 'La promesa Artimex' : 'The Artimex promise'}</p><h2>{es ? 'Autenticidad. Consistencia. Ingredientes superiores.' : 'Authenticity. Consistency. Superior ingredients.'}</h2><p>{es ? 'Artimex aborda el pan mexicano como un oficio: ingredientes correctos, fermentación precisa y la disciplina de honrar la tradición en cada lote.' : 'Artimex approaches Mexican baking as a craft: the right ingredients, precise fermentation and the discipline to honor tradition in every batch.'}</p></section>
+      <section class="feature-grid"><article><span>01</span><h2>{es ? 'Historia y oficio' : 'Heritage & craft'}</h2><p>{es ? 'Recetas mexicanas reconocibles, elaboradas con atención a sabor, forma y textura.' : 'Recognizable Mexican recipes made with attention to flavor, form and texture.'}</p></article><article><span>02</span><h2>{es ? 'Capacidad' : 'Capability'}</h2><p>{es ? 'Programas para pan fresco al público y productos congelados para operaciones profesionales.' : 'Programs for fresh retail bread and frozen products for professional operations.'}</p></article><article><span>03</span><h2>{es ? 'Confianza' : 'Confidence'}</h2><p>{es ? 'Procesos repetibles creados para resultados consistentes.' : 'Repeatable processes designed for dependable results.'}</p></article></section>
+      <nav class="page-ctas" aria-label={es ? 'Siguientes pasos' : 'Next steps'}><a class="button button-primary" href={es ? '/es/productos' : '/products'}>{es ? 'Ver productos' : 'Explore products'}</a><a class="button outline" href={wholesaleBase}>{es ? 'Mayoreo' : 'Wholesale'}</a><a class="button outline" href={retailBase}>{es ? 'Venta al público' : 'Retail'}</a></nav>
+    </>}
+
+    {item.kind === 'products' && <section class="catalog-section"><div class="catalog-intro"><h2>{es ? 'Familias existentes' : 'Existing families'}</h2><p>{es ? 'Los formatos, precios y disponibilidad que no figuran en los datos actuales se confirmarán con Artimex antes de publicarse.' : 'Formats, prices and availability not present in current data will be confirmed with Artimex before publication.'}</p></div><div class="catalog-grid">{productFamilies.map((entry) => <a href={`${es ? '/es/productos' : '/products'}/${entry.slug}`}><img src={entry.image} alt={`${es ? entry.esName : entry.name} — Artimex`} loading="lazy"/><span>{es ? entry.esName : entry.name}</span><small>{es ? entry.esNote : entry.note}</small></a>)}</div><div class="split-callouts"><a href={retailBase}><small>{es ? 'Horneado y sin hornear' : 'Baked & un-baked'}</small><h2>{es ? 'Para recoger' : 'Retail pickup'}</h2><span>→</span></a><a href={wholesaleBase}><small>{es ? 'Todos los productos congelados' : 'All products frozen'}</small><h2>{es ? 'Mayoreo' : 'Wholesale'}</h2><span>→</span></a></div></section>}
+
+    {item.kind === 'product' && product && <section class="product-detail"><div><p class="eyebrow">{es ? 'Familia de producto' : 'Product family'}</p><h2>{es ? 'Formatos disponibles' : 'Available formats'}</h2><p>{es ? 'Los formatos de venta y detalles adicionales están pendientes de validación por Artimex.' : 'Sales formats and additional details are pending Artimex validation.'}</p></div><aside><a href={retailBase}>{es ? 'Explorar recogida al público' : 'Explore retail pickup'} →</a><a href={wholesaleBase}>{es ? 'Explorar mayoreo congelado' : 'Explore frozen wholesale'} →</a></aside></section>}
+
+    {item.kind === 'wholesale' && <><section class="feature-grid commerce-paths"><a href={`${wholesaleBase}/${es ? 'por-caja' : 'by-case'}`}><span>01</span><h2>{es ? 'Por caja' : 'By case'}</h2><p>{es ? 'Seleccione productos congelados y prepare una solicitud de transporte.' : 'Select frozen products and prepare a freight request.'}</p></a><a href={`${wholesaleBase}/${es ? 'por-pallet' : 'by-pallet'}`}><span>02</span><h2>{es ? 'Por pallet' : 'By pallet'}</h2><p>{es ? 'Planifique volúmenes por pallet con destino de entrega.' : 'Plan pallet volumes with a delivery destination.'}</p></a><a href={`${wholesaleBase}/${es ? 'precios-por-contrato' : 'contract-pricing'}`}><span>03</span><h2>{es ? 'Contrato o camión completo' : 'Contract or truckload'}</h2><p>{es ? 'Solicite precios personalizados, crédito o co-packing.' : 'Request custom pricing, credit or co-packing.'}</p></a></section><section class="frozen-rule"><strong>{es ? 'Todos los productos Wholesale son congelados.' : 'All Wholesale products are frozen.'}</strong><p>{es ? 'Los precios FOB y tarifas de transporte se mostrarán únicamente cuando Artimex proporcione datos aprobados.' : 'FOB prices and freight rates will appear only after Artimex provides approved data.'}</p></section></>}
+
+    {(item.kind === 'wholesale-order' || item.kind === 'wholesale-contact' || item.kind === 'retail-order' || item.kind === 'careers' || item.kind === 'contact') && <section class="interactive-section"><CommercePanel client:load lang={lang} kind={item.kind} pageKey={item.key} /></section>}
+
+    {item.kind === 'retail' && <><section class="pickup-banner wide"><strong>{es ? 'Solo para recoger' : 'Pickup only'}</strong><span>{es ? 'No se ofrece entrega para pedidos al público.' : 'Retail delivery is not offered.'}</span></section><section class="feature-grid commerce-paths"><a href={`${retailBase}/${es ? 'ordenar' : 'order-online'}`}><span>01</span><h2>{es ? 'Ordenar en línea' : 'Order online'}</h2><p>{es ? 'Productos horneados hasta 24 unidades por producto; productos sin hornear hasta 2 cajas.' : 'Baked products up to 24 units per product; un-baked products up to 2 boxes.'}</p></a><a href={`${retailBase}/${es ? 'ubicaciones' : 'locations'}`}><span>02</span><h2>{es ? 'Ubicaciones' : 'Locations'}</h2><p>{es ? 'Elija una sucursal El Gallo Giro aprobada cuando se publiquen los datos.' : 'Choose an approved El Gallo Giro location once data is published.'}</p></a></section></>}
+
+    {item.kind === 'locations' && <section class="data-state standalone"><h2>{es ? 'Ubicaciones disponibles' : 'Available pickup locations'}</h2>{pickupLocations.length === 0 && <p>{es ? 'Artimex aún debe confirmar la lista de sucursales El Gallo Giro, direcciones y horarios. No se publicarán ubicaciones ficticias.' : 'Artimex still needs to confirm the El Gallo Giro location list, addresses and hours. No fictional locations will be published.'}</p>}<a class="button button-primary" href={contactPath}>{es ? 'Contactar Artimex' : 'Contact Artimex'}</a></section>}
+
+    {item.kind === 'legal' && <section class="legal-placeholder"><h2>{es ? 'Texto aprobado pendiente' : 'Approved copy pending'}</h2><p>{es ? 'Esta página reserva la ruta y la estructura del documento. El texto jurídico definitivo se publicará únicamente después de su aprobación por Artimex y su asesoría correspondiente.' : 'This page reserves the route and document structure. Final legal copy will be published only after approval by Artimex and its appropriate counsel.'}</p></section>}
+  </main>
+  <SiteFooter lang={lang}/>
+</div>

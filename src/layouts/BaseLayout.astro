@@ -6,20 +6,18 @@ interface Props {
   description?: string;
   image?: string;
   lang?: 'en' | 'es';
-  alternatePath?: string;
 }
 
 const {
   title,
   description = 'Artimex Artisan Mexican Bakery — authentic Mexican breads, fresh for retail and frozen ready-to-bake for wholesale.',
   image = '/images/hero-premium.png',
-  lang = 'en',
-  alternatePath = lang === 'es' ? '/' : '/es/'
+  lang = 'en'
 } = Astro.props;
 
-const configuredSite = import.meta.env.PUBLIC_SITE_URL || 'https://artimex.vercel.app';
-const canonical = new URL(Astro.url.pathname, configuredSite).toString();
-const socialImage = new URL(image, configuredSite).toString();
+const configuredSite = import.meta.env.PUBLIC_SITE_URL;
+const canonical = configuredSite ? new URL(Astro.url.pathname, configuredSite).toString() : undefined;
+const socialImage = configuredSite ? new URL(image, configuredSite).toString() : image;
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'Bakery',
@@ -46,24 +44,23 @@ const structuredData = {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#17110d" />
-    <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang={lang} href={canonical} />
-    <link rel="alternate" hreflang={lang === 'en' ? 'es' : 'en'} href={new URL(alternatePath, configuredSite)} />
-    <link rel="alternate" hreflang="x-default" href={new URL(lang === 'en' ? Astro.url.pathname : alternatePath, configuredSite)} />
-    <meta name="robots" content="index,follow" />
+    {canonical && <link rel="canonical" href={canonical} />}
+    {configuredSite && <link rel="alternate" hreflang="en" href={new URL('/', configuredSite)} />}
+    {configuredSite && <link rel="alternate" hreflang="es" href={new URL('/es/', configuredSite)} />}
+    {configuredSite && <link rel="alternate" hreflang="x-default" href={new URL('/', configuredSite)} />}
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Artimex Bakery" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={socialImage} />
-    <meta property="og:url" content={canonical} />
+    {canonical && <meta property="og:url" content={canonical} />}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
-    <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   </head>
   <body>
     <slot />

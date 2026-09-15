@@ -37,16 +37,14 @@ const c = es ? {
   freezer: 'From freezer to bakery case', path: 'A simpler path to', bake: 'a better bake.', stock: 'Stock', stockD: 'Keep your core assortment frozen until the operation needs it.', prepare: 'Prepare', prepareD: 'Follow the product-specific thaw, proof or staging process.', bakeStep: 'Bake', bakeD: 'Finish in your oven for fresh aroma, texture and bakery-case appeal.', sell: 'Sell', sellD: 'Offer authentic pan mexicano with less operational friction.',
   contactEye: 'Fresh bakery • Wholesale • Foodservice', bring: 'Bring Artimex', table: 'to your table.', contactText: 'For retail orders, wholesale programs, distribution questions or a custom foodservice assortment, talk with the Artimex team.', email: 'Email sales', call: 'Call us', visit: 'Visit', footer: 'Authentic Mexican bread, made with craft and built for consistency.',
 };
-const nav = es ? [['Inicio', '/es/'], ['Acerca de Artimex', '/es/acerca-de-artimex'], ['Productos', '/es/productos'], ['Mayoreo', '/es/mayoreo'], ['Venta al público', '/es/venta-al-publico'], ['Empleo', '/es/empleo'], ['Contacto', '/es/contacto']] : [['Home', '/'], ['About Artimex', '/about'], ['Products', '/products'], ['Wholesale', '/wholesale'], ['Retail', '/retail'], ['Careers', '/careers'], ['Contact', '/contact']];
-const retailOrderPath = es ? '/es/venta-al-publico/ordenar' : '/retail/order-online';
-const wholesalePath = es ? '/es/mayoreo' : '/wholesale';
+const nav = [[c.home, '#top'], [c.story, '#story'], [c.fresh, '#fresh-products'], [c.frozen, '#frozen-products'], [c.products, '#shop'], [c.contact, '#contact']];
 ---
 <div class="site-shell" id="top">
-  <div class="announcement"><span>{c.announcement}</span><a href={wholesalePath}>{c.wholesale} <span>↗</span></a></div>
+  <div class="announcement"><span>{c.announcement}</span><a href="#wholesale">{c.wholesale} <span>↗</span></a></div>
   <header class="header" data-header>
     <a class="brand" href={localePath} aria-label="Artimex home"><BrandLogo /></a>
     <nav class="nav" aria-label="Main navigation">{nav.map(([label, href]) => <a href={href}>{label}</a>)}</nav>
-    <div class="header-actions"><a class="language-link" href={otherPath} hreflang={es ? 'en' : 'es'}>{c.language}</a><a class="header-cta" href={retailOrderPath}>{es ? 'Ordenar en línea' : 'Order online'} <span>↗</span></a></div>
+    <div class="header-actions"><a class="language-link" href={otherPath} hreflang={es ? 'en' : 'es'}>{c.language}</a><a class="header-cta" href="#shop">{c.shop} <span>↗</span></a></div>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label={c.menu}>
       <span></span><span></span><span></span>
     </button>
@@ -60,7 +58,7 @@ const wholesalePath = es ? '/es/mayoreo' : '/wholesale';
   <main>
     <section class="hero">
       <div class="hero-copy"><p class="eyebrow light">{c.heroEye}</p><h1>{c.heroTitle}<em>{c.heroEm}</em></h1><p class="hero-lead">{c.heroLead}</p>
-        <div class="hero-actions"><a class="button button-primary" href={retailOrderPath}>{c.shopFresh} <span>↗</span></a><a class="button button-ghost" href={wholesalePath}>{c.explore}</a></div>
+        <div class="hero-actions"><a class="button button-primary" href="#fresh-products">{c.shopFresh} <span>↗</span></a><a class="button button-ghost" href="#wholesale">{c.explore}</a></div>
         <div class="hero-meta"><div><strong>Fresh</strong><span>{c.freshMeta}</span></div><div><strong>Frozen</strong><span>{c.frozenMeta}</span></div><div><strong>{c.authentic}</strong><span>{c.authenticMeta}</span></div></div>
       </div>
       <div class="hero-visual"><picture><source srcset="/images/original/artimex-bread-assortment.webp" type="image/webp"/><img src="/images/original/artimex-bread-assortment.jpg" alt={es ? 'Surtido original de panes y pasteles mexicanos Artimex' : 'Original Artimex assortment of Mexican breads and pastries'} width="800" height="868" fetchpriority="high" decoding="async"/></picture><div class="hero-polaroid polaroid-concha"><img src="/images/concha-pink.jpg" alt="" width="440" height="440"/><small>Concha rosa</small></div><div class="hero-polaroid polaroid-empanada"><img src="/images/empanada.jpg" alt="" width="590" height="440"/><small>Empanada</small></div><div class="hero-badge"><strong>130+</strong><p>{es ? 'recetas auténticas' : 'authentic recipes'}</p></div><div class="hero-script">{c.script}</div></div>
@@ -68,8 +66,8 @@ const wholesalePath = es ? '/es/mayoreo' : '/wholesale';
     <section class="marquee" aria-label="Product categories"><div class="marquee-track"><div class="marquee-set"><span>CONCHAS</span><i>✦</i><span>EMPANADAS</span><i>✦</i><span>BOLILLOS</span><i>✦</i><span>CAMPECHANAS</span><i>✦</i><span>PAN FINO</span><i>✦</i><span>POLVORONES</span><i>✦</i><span>TELERAS</span><i>✦</i><span>OREJAS</span><i>✦</i><span>FOODSERVICE</span><i>✦</i></div><div class="marquee-set" aria-hidden="true"><span>CONCHAS</span><i>✦</i><span>EMPANADAS</span><i>✦</i><span>BOLILLOS</span><i>✦</i><span>CAMPECHANAS</span><i>✦</i><span>PAN FINO</span><i>✦</i><span>POLVORONES</span><i>✦</i><span>TELERAS</span><i>✦</i><span>OREJAS</span><i>✦</i><span>FOODSERVICE</span><i>✦</i></div></div></section>
 
     <section class="journeys" aria-label={es ? 'Dos experiencias Artimex' : 'Two Artimex experiences'}>
-      <article class="journey-fresh"><p class="eyebrow light">{es ? 'Para casa y familia' : 'For home & family'}</p><h2>{es ? 'Fresco desde' : 'Fresh from'}<br/>{es ? 'nuestros hornos.' : 'our ovens.'}</h2><p>{es ? 'Arma tu caja con los panes mexicanos que ama tu familia, horneados localmente con ingredientes superiores.' : 'Build your box with the Mexican breads your family loves, baked locally with superior ingredients.'}</p><a href={retailOrderPath}>{c.shopFresh} <span>→</span></a><b>01</b></article>
-      <article class="journey-frozen"><p class="eyebrow light">{es ? 'Para retail y foodservice' : 'For retail & foodservice'}</p><h2>{es ? 'Tu panadería,' : 'Your bakery,'}<br/>{es ? 'más simple.' : 'made simpler.'}</h2><p>{es ? 'Masa congelada y productos terminados con calidad constante, menor merma y menos mano de obra.' : 'Frozen dough and fully baked programs with dependable quality, lower waste and less labor.'}</p><a href={wholesalePath}>{c.explore} <span>→</span></a><b>02</b></article>
+      <article class="journey-fresh"><p class="eyebrow light">{es ? 'Para casa y familia' : 'For home & family'}</p><h2>{es ? 'Fresco desde' : 'Fresh from'}<br/>{es ? 'nuestros hornos.' : 'our ovens.'}</h2><p>{es ? 'Arma tu caja con los panes mexicanos que ama tu familia, horneados localmente con ingredientes superiores.' : 'Build your box with the Mexican breads your family loves, baked locally with superior ingredients.'}</p><a href="#fresh-products">{c.shopFresh} <span>→</span></a><b>01</b></article>
+      <article class="journey-frozen"><p class="eyebrow light">{es ? 'Para retail y foodservice' : 'For retail & foodservice'}</p><h2>{es ? 'Tu panadería,' : 'Your bakery,'}<br/>{es ? 'más simple.' : 'made simpler.'}</h2><p>{es ? 'Masa congelada y productos terminados con calidad constante, menor merma y menos mano de obra.' : 'Frozen dough and fully baked programs with dependable quality, lower waste and less labor.'}</p><a href="#frozen-products">{c.explore} <span>→</span></a><b>02</b></article>
     </section>
 
     <section class="shop-section section" id="shop"><div class="section-heading"><div><p class="eyebrow">{c.twoWays}</p><h2>{c.shopTitle}<br/><em>{c.shopEm}</em></h2></div><p>{c.shopIntro}</p></div><ShopExperience client:load lang={lang}/></section>
@@ -84,14 +82,14 @@ const wholesalePath = es ? '/es/mayoreo' : '/wholesale';
 
     <section class="contact section" id="contact"><div class="contact-card"><div class="contact-copy"><p class="eyebrow light">{c.contactEye}</p><h2>{c.bring}<br/><em>{c.table}</em></h2><p>{c.contactText}</p></div><div class="contact-actions"><a href="mailto:sales@artimex.com"><small>{c.email}</small><strong>sales@artimex.com</strong><span>↗</span></a><a href="tel:+15627770924"><small>{c.call}</small><strong>562 777 0924</strong><span>↗</span></a><div><small>{c.visit}</small><strong>12764 Florence Avenue<br/>Santa Fe Springs, CA 90670</strong></div></div></div></section>
   </main>
-  <footer class="footer"><a class="brand footer-brand" href={localePath}><BrandLogo compact/></a><p>{c.footer}</p><div class="footer-links"><a href={localePath}>{c.home}</a><a href={es ? '/es/acerca-de-artimex' : '/about'}>{c.story}</a><a href={es ? '/es/productos' : '/products'}>{c.products}</a><a href={wholesalePath}>{es ? 'Mayoreo' : 'Wholesale'}</a><a href={es ? '/es/contacto' : '/contact'}>{c.contact}</a></div><small>© {new Date().getFullYear()} Artimex Artisan Mexican Bakery.</small></footer>
+  <footer class="footer"><a class="brand footer-brand" href={localePath}><BrandLogo compact/></a><p>{c.footer}</p><div class="footer-links"><a href="#top">{c.home}</a><a href="#story">{c.story}</a><a href="#fresh-products">Fresh</a><a href="#frozen-products">Frozen</a><a href="#contact">{c.contact}</a></div><small>© {new Date().getFullYear()} Artimex Artisan Mexican Bakery.</small></footer>
 </div>
 
 <script>
   const toggle = document.querySelector('.menu-toggle');
   const menu = document.querySelector('.mobile-menu');
   const close = document.querySelector('.menu-close');
-  const setOpen = (open: boolean) => {
+  const setOpen = (open) => {
     if (!(toggle instanceof HTMLButtonElement) || !(menu instanceof HTMLElement)) return;
     toggle.setAttribute('aria-expanded', String(open));
     menu.hidden = !open;

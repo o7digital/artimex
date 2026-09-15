@@ -1,10 +1,8 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://artimex.vercel.app',
-  integrations: [react(), sitemap()],
+  integrations: [react()],
   output: 'static',
   vite: {
     server: {

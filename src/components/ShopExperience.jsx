@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
 import { freshProducts, wholesaleProducts } from '../data/products.js';
-import { RETAIL_LIMITS } from '../domain/commerce';
 
 const spanishProducts = {
   conchas: ['Conchas', 'Vainilla · Chocolate · Rosa · Amarilla', 'Surtido fresco'],
@@ -30,14 +29,14 @@ export default function ShopExperience({ lang = 'en' }) {
   const itemCount = selectedProducts.reduce((total, product) => total + selection[product.id], 0);
 
   const copy = es ? {
-    fresh: 'Pan fresco · Solo para recoger', frozen: 'Mayoreo congelado', freshEye: 'La colección Artimex', freshTitle: 'Encuentra tu favorito.', frozenEye: 'Programa Artimex Bake-Off', frozenTitle: 'Variedad auténtica. Control operativo.', frozenBody: 'Abastece una panadería mexicana completa sin sumar panaderos especializados, equipo pesado ni riesgo de producción diaria.', filters: 'Filtros de producto', all: 'Todos', add: 'Agregar a la canasta', addCase: 'Agregar a la solicitud', basket: 'Canasta', inquiry: 'Solicitud mayorista', review: 'Revisar', close: 'Cerrar selección', selection: 'Selección demostrativa', request: 'Solicitar catálogo completo', case: 'Caja', pallet: 'Tarima', units: 'piezas', shelf: 'Hasta 6 meses de conservación congelada', formats: 'Formatos consistentes de caja y tarima', custom: 'Programas personalizados disponibles', send: 'Enviar solicitud mayorista', demo: 'Solo para recoger. Canasta demo — no se ha registrado ningún pedido ni pago.'
+    fresh: 'Pan fresco', frozen: 'Mayoreo congelado', freshEye: 'La colección Artimex', freshTitle: 'Encuentra tu favorito.', frozenEye: 'Programa Artimex Bake-Off', frozenTitle: 'Variedad auténtica. Control operativo.', frozenBody: 'Abastece una panadería mexicana completa sin sumar panaderos especializados, equipo pesado ni riesgo de producción diaria.', filters: 'Filtros de producto', all: 'Todos', add: 'Agregar a la canasta', addCase: 'Agregar a la solicitud', basket: 'Canasta', inquiry: 'Solicitud mayorista', review: 'Revisar', close: 'Cerrar selección', selection: 'Selección demostrativa', request: 'Solicitar catálogo completo', case: 'Caja', pallet: 'Tarima', units: 'piezas', shelf: 'Hasta 6 meses de conservación congelada', formats: 'Formatos consistentes de caja y tarima', custom: 'Programas personalizados disponibles', send: 'Enviar solicitud mayorista', demo: 'Canasta demo — precios y pago se conectarán al futuro backend.'
   } : {
-    fresh: 'Fresh bakery · Pickup only', frozen: 'Frozen wholesale', freshEye: 'The Artimex collection', freshTitle: 'Find your favorite.', frozenEye: 'Artimex bake-off program', frozenTitle: 'Authentic variety. Operational control.', frozenBody: 'Stock a complete Mexican bakery without adding specialized bakers, heavy equipment or daily production risk.', filters: 'Product filters', all: 'All', add: 'Add to basket', addCase: 'Add to inquiry', basket: 'Basket', inquiry: 'Wholesale inquiry', review: 'Review', close: 'Close selection', selection: 'Demonstration selection', request: 'Request full catalog', case: 'Case', pallet: 'Pallet', units: 'units', shelf: 'Up to 6-month frozen shelf life', formats: 'Consistent case and pallet formats', custom: 'Custom retail programs available', send: 'Send wholesale inquiry', demo: 'Pickup only. Demo basket — no order or payment has been recorded.'
+    fresh: 'Fresh bakery', frozen: 'Frozen wholesale', freshEye: 'The Artimex collection', freshTitle: 'Find your favorite.', frozenEye: 'Artimex bake-off program', frozenTitle: 'Authentic variety. Operational control.', frozenBody: 'Stock a complete Mexican bakery without adding specialized bakers, heavy equipment or daily production risk.', filters: 'Product filters', all: 'All', add: 'Add to basket', addCase: 'Add to inquiry', basket: 'Basket', inquiry: 'Wholesale inquiry', review: 'Review', close: 'Close selection', selection: 'Demonstration selection', request: 'Request full catalog', case: 'Case', pallet: 'Pallet', units: 'units', shelf: 'Up to 6-month frozen shelf life', formats: 'Consistent case and pallet formats', custom: 'Custom retail programs available', send: 'Send wholesale inquiry', demo: 'Demo basket — checkout and live pricing will connect to the future backend.'
   };
 
   const productText = (product, index = 0) => es && spanishProducts[product.id] ? spanishProducts[product.id][index] : [product.name, product.note, product.tag][index];
   const switchMode = (nextMode) => { setMode(nextMode); setCategory('All'); setSelection({}); setIsSummaryOpen(false); };
-  const addProduct = (id) => setSelection((current) => ({ ...current, [id]: mode === 'fresh' ? Math.min((current[id] || 0) + 1, RETAIL_LIMITS.bakedUnits) : (current[id] || 0) + 1 }));
+  const addProduct = (id) => setSelection((current) => ({ ...current, [id]: (current[id] || 0) + 1 }));
   const removeProduct = (id) => setSelection((current) => { const next = { ...current }; if (next[id] > 1) next[id] -= 1; else delete next[id]; return next; });
 
   useEffect(() => {
@@ -56,7 +55,7 @@ export default function ShopExperience({ lang = 'en' }) {
 
     {mode === 'fresh' ? <>
       <div className="shop-toolbar"><div><p className="eyebrow">{copy.freshEye}</p><h3>{copy.freshTitle}</h3></div><div className="category-list" aria-label={copy.filters}>{categories.map((item) => <button key={item} type="button" className={category === item ? 'active' : ''} aria-pressed={category === item} onClick={() => setCategory(item)}>{item === 'All' ? copy.all : item}</button>)}</div></div>
-      <div className="product-grid editorial-products">{visibleProducts.map((product) => <article className="product-card" key={product.id}>
+      <div className="product-grid editorial-products">{visibleProducts.map((product, index) => <article className="product-card" key={product.id}>
         <div className="product-image-wrap"><span className="product-number">0{freshProducts.indexOf(product) + 1}</span><img src={product.image} alt={`${productText(product)} — Artimex Bakery`} width={product.imageWidth} height={product.imageHeight} loading="lazy" decoding="async"/><i aria-hidden="true">↘</i></div>
         <div className="product-copy"><div className="product-title-row"><div><h4>{productText(product)}</h4><p>{productText(product, 1)}</p></div><small>{productText(product, 2)}</small></div><button type="button" onClick={() => addProduct(product.id)}>{copy.add}<span aria-hidden="true">+</span></button></div>
       </article>)}</div>

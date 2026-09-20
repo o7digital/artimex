@@ -9,7 +9,7 @@ const localePath = es ? '/es/' : '/';
 const otherPath = es ? '/' : '/es/';
 const c = es ? {
   announcement: 'Panadería mexicana auténtica • Sur de California', wholesale: 'Mayoreo y foodservice',
-  home: 'Inicio', story: 'Nuestra historia', fresh: 'Fresco / B2C', frozen: 'Congelado / B2B', products: 'Productos', contact: 'Contacto', shop: 'Comprar pan', menu: 'Menú', close: 'Cerrar', language: 'EN',
+  home: 'Inicio', story: 'Nuestra historia', fresh: 'Fresco / B2C', frozen: 'Congelado / B2B', products: 'Productos', careers: 'Empleo', contact: 'Contacto', shop: 'Comprar pan', menu: 'Menú', close: 'Cerrar', language: 'EN',
   heroEye: 'Autenticidad • Tradición • Ingredientes superiores', heroTitle: 'Pan mexicano,', heroEm: 'hecho para llegar más lejos.',
   heroLead: 'Panes y pasteles artesanales con el sabor, la textura y el espíritu de una auténtica panadería — frescos para hoy, congelados y listos para hornear a escala.',
   shopFresh: 'Comprar fresco', explore: 'Ver mayoreo', freshMeta: 'Selección fresca B2C', frozenMeta: 'Programa B2B listo para hornear', authentic: 'Auténtico', authenticMeta: 'Recetas y oficio mexicano', badge: 'Hecho para la vitrina. Diseñado para ser consistente.', script: 'Pan hecho con corazón.',
@@ -21,10 +21,11 @@ const c = es ? {
   business: 'Artimex para negocios', businessTitle: 'Tu programa de panadería,', businessEm: 'sin complicaciones.', businessLead: 'Los productos congelados listos para hornear ayudan a restaurantes, supermercados y operadores a ampliar su surtido reduciendo mano de obra, merma y complejidad diaria.',
   w1: 'Menos presión laboral', w1d: 'Ofrece una selección mexicana auténtica sin formar un equipo completo de panadería.', w2: 'Producción predecible', w2d: 'Productos estandarizados para una cocción, rendimiento y presentación más consistentes.', w3: 'Control de merma', w3d: 'Hornea según la demanda y conserva un surtido más amplio con menor exposición.', access: 'Solicitar acceso mayorista', sales: 'Hablar con ventas',
   freezer: 'Del congelador a la vitrina', path: 'Un camino más simple hacia', bake: 'un mejor horneado.', stock: 'Almacena', stockD: 'Conserva el surtido principal congelado hasta que la operación lo necesite.', prepare: 'Prepara', prepareD: 'Sigue el proceso específico de descongelación, fermentación o preparación.', bakeStep: 'Hornea', bakeD: 'Termina en tu horno para lograr aroma, textura y presencia de vitrina.', sell: 'Vende', sellD: 'Ofrece auténtico pan mexicano con menos fricción operativa.',
+  careersEye: 'Oportunidades en Artimex', careersTitle: 'Crece con', careersEm: 'nosotros.', careersText: '¿Te apasiona el oficio, la calidad y trabajar con un equipo que honra la tradición? Nos interesa conocer tu experiencia para futuras oportunidades en Artimex.', careersCta: 'Comparte tu experiencia', careersNote: 'Nuevas oportunidades', careersCard: 'Ayúdanos a llevar el auténtico pan mexicano aún más lejos.',
   contactEye: 'Pan fresco • Mayoreo • Foodservice', bring: 'Lleva Artimex', table: 'a tu mesa.', contactText: 'Para pedidos, programas mayoristas, distribución o un surtido foodservice a la medida, habla con el equipo Artimex.', email: 'Correo de ventas', call: 'Llámanos', visit: 'Visítanos', footer: 'Pan mexicano auténtico, hecho con oficio y creado para ser consistente.',
 } : {
   announcement: 'Authentic Mexican bakery • Southern California', wholesale: 'Wholesale & foodservice',
-  home: 'Home', story: 'Our story', fresh: 'Fresh / B2C', frozen: 'Frozen / B2B', products: 'Products', contact: 'Contact', shop: 'Shop the bakery', menu: 'Menu', close: 'Close', language: 'ES',
+  home: 'Home', story: 'Our story', fresh: 'Fresh / B2C', frozen: 'Frozen / B2B', products: 'Products', careers: 'Careers', contact: 'Contact', shop: 'Shop the bakery', menu: 'Menu', close: 'Close', language: 'ES',
   heroEye: 'Authenticity • Tradition • Superior ingredients', heroTitle: 'Mexican baking,', heroEm: 'made to move.',
   heroLead: 'Artisan breads and pastries made with the flavor, texture and spirit of a real panadería — fresh for today, frozen and ready-to-bake for scale.',
   shopFresh: 'Shop fresh', explore: 'Explore wholesale', freshMeta: 'B2C bakery assortment', frozenMeta: 'B2B ready-to-bake program', authentic: 'Authentic', authenticMeta: 'Mexican recipes & craft', badge: 'Made for the bakery case. Engineered for consistency.', script: 'Pan hecho con corazón.',
@@ -35,9 +36,10 @@ const c = es ? {
   business: 'Artimex for business', businessTitle: 'Your bakery program,', businessEm: 'without the bakery headache.', businessLead: 'Frozen, ready-to-bake products help restaurants, grocers and foodservice operators expand assortment while reducing skilled labor pressure, waste and day-to-day complexity.',
   w1: 'Lower labor pressure', w1d: 'Serve an authentic Mexican bakery assortment without building a full scratch bakery team.', w2: 'Predictable output', w2d: 'Standardized products give your operation a more consistent bake, yield and presentation.', w3: 'Control waste', w3d: 'Bake closer to demand and keep a broader assortment available with less finished-product exposure.', access: 'Request wholesale access', sales: 'Talk to sales',
   freezer: 'From freezer to bakery case', path: 'A simpler path to', bake: 'a better bake.', stock: 'Stock', stockD: 'Keep your core assortment frozen until the operation needs it.', prepare: 'Prepare', prepareD: 'Follow the product-specific thaw, proof or staging process.', bakeStep: 'Bake', bakeD: 'Finish in your oven for fresh aroma, texture and bakery-case appeal.', sell: 'Sell', sellD: 'Offer authentic pan mexicano with less operational friction.',
+  careersEye: 'Opportunities at Artimex', careersTitle: 'Grow with', careersEm: 'us.', careersText: 'Passionate about craft, quality and working with a team that honors tradition? We would like to learn about your experience for future opportunities at Artimex.', careersCta: 'Share your experience', careersNote: 'Future opportunities', careersCard: 'Help us bring authentic Mexican bread even further.',
   contactEye: 'Fresh bakery • Wholesale • Foodservice', bring: 'Bring Artimex', table: 'to your table.', contactText: 'For retail orders, wholesale programs, distribution questions or a custom foodservice assortment, talk with the Artimex team.', email: 'Email sales', call: 'Call us', visit: 'Visit', footer: 'Authentic Mexican bread, made with craft and built for consistency.',
 };
-const nav = [[c.home, '#top'], [c.story, '#story'], [c.fresh, '#fresh-products'], [c.frozen, '#frozen-products'], [c.products, '#shop'], [c.contact, '#contact']];
+const nav = [[c.home, '#top'], [c.story, '#story'], [c.fresh, '#fresh-products'], [c.frozen, '#frozen-products'], [c.products, '#shop'], [c.careers, '#careers'], [c.contact, '#contact']];
 ---
 <div class="site-shell" id="top">
   <div class="announcement"><span>{c.announcement}</span><a href="#wholesale">{c.wholesale} <span>↗</span></a></div>
@@ -80,16 +82,18 @@ const nav = [[c.home, '#top'], [c.story, '#story'], [c.fresh, '#fresh-products']
 
     <section class="process section"><div class="section-heading compact"><div><p class="eyebrow">{c.freezer}</p><h2>{c.path}<br/><em>{c.bake}</em></h2></div></div><div class="process-track"><article><span>01</span><div><h3>{c.stock}</h3><p>{c.stockD}</p></div></article><article><span>02</span><div><h3>{c.prepare}</h3><p>{c.prepareD}</p></div></article><article><span>03</span><div><h3>{c.bakeStep}</h3><p>{c.bakeD}</p></div></article><article><span>04</span><div><h3>{c.sell}</h3><p>{c.sellD}</p></div></article></div></section>
 
+    <section class="careers section" id="careers" aria-labelledby="careers-title"><div class="careers-visual"><img src="/images/original/artimex-conchas-portrait.webp" alt={es ? 'Conchas artesanales Artimex' : 'Artimex artisan conchas'} width="300" height="329" loading="lazy" decoding="async"/><div class="careers-card"><small>{c.careersNote}</small><strong>{c.careersCard}</strong></div></div><div class="careers-copy"><p class="eyebrow light">{c.careersEye}</p><h2 id="careers-title">{c.careersTitle}<br/><em>{c.careersEm}</em></h2><p>{c.careersText}</p><a class="button button-cream" href={`mailto:sales@artimex.com?subject=${encodeURIComponent(es ? 'Empleo en Artimex' : 'Careers at Artimex')}`}>{c.careersCta} <span>↗</span></a></div></section>
+
     <section class="contact section" id="contact"><div class="contact-card"><div class="contact-copy"><p class="eyebrow light">{c.contactEye}</p><h2>{c.bring}<br/><em>{c.table}</em></h2><p>{c.contactText}</p></div><div class="contact-actions"><a href="mailto:sales@artimex.com"><small>{c.email}</small><strong>sales@artimex.com</strong><span>↗</span></a><a href="tel:+15627770924"><small>{c.call}</small><strong>562 777 0924</strong><span>↗</span></a><div><small>{c.visit}</small><strong>12764 Florence Avenue<br/>Santa Fe Springs, CA 90670</strong></div></div></div></section>
   </main>
-  <footer class="footer"><a class="brand footer-brand" href={localePath}><BrandLogo compact/></a><p>{c.footer}</p><div class="footer-links"><a href="#top">{c.home}</a><a href="#story">{c.story}</a><a href="#fresh-products">Fresh</a><a href="#frozen-products">Frozen</a><a href="#contact">{c.contact}</a></div><small>© {new Date().getFullYear()} Artimex Artisan Mexican Bakery.</small></footer>
+  <footer class="footer"><a class="brand footer-brand" href={localePath}><BrandLogo compact/></a><p>{c.footer}</p><div class="footer-links"><a href="#top">{c.home}</a><a href="#story">{c.story}</a><a href="#fresh-products">Fresh</a><a href="#frozen-products">Frozen</a><a href="#careers">{c.careers}</a><a href="#contact">{c.contact}</a></div><small>© {new Date().getFullYear()} Artimex Artisan Mexican Bakery.</small></footer>
 </div>
 
 <script>
   const toggle = document.querySelector('.menu-toggle');
   const menu = document.querySelector('.mobile-menu');
   const close = document.querySelector('.menu-close');
-  const setOpen = (open) => {
+  const setOpen = (open: boolean) => {
     if (!(toggle instanceof HTMLButtonElement) || !(menu instanceof HTMLElement)) return;
     toggle.setAttribute('aria-expanded', String(open));
     menu.hidden = !open;

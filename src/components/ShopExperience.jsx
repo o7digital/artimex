@@ -55,7 +55,7 @@ export default function ShopExperience({ lang = 'en' }) {
 
     {mode === 'fresh' ? <>
       <div className="shop-toolbar"><div><p className="eyebrow">{copy.freshEye}</p><h3>{copy.freshTitle}</h3></div><div className="category-list" aria-label={copy.filters}>{categories.map((item) => <button key={item} type="button" className={category === item ? 'active' : ''} aria-pressed={category === item} onClick={() => setCategory(item)}>{item === 'All' ? copy.all : item}</button>)}</div></div>
-      <div className="product-grid editorial-products">{visibleProducts.map((product, index) => <article className="product-card" key={product.id}>
+      <div className="product-grid editorial-products">{visibleProducts.map((product) => <article className="product-card" key={product.id}>
         <div className="product-image-wrap"><span className="product-number">0{freshProducts.indexOf(product) + 1}</span><img src={product.image} alt={`${productText(product)} — Artimex Bakery`} width={product.imageWidth} height={product.imageHeight} loading="lazy" decoding="async"/><i aria-hidden="true">↘</i></div>
         <div className="product-copy"><div className="product-title-row"><div><h4>{productText(product)}</h4><p>{productText(product, 1)}</p></div><small>{productText(product, 2)}</small></div><button type="button" onClick={() => addProduct(product.id)}>{copy.add}<span aria-hidden="true">+</span></button></div>
       </article>)}</div>

@@ -159,13 +159,13 @@ Headline:
 
 `Heart.`
 
-Text: `When ARTIMEX ARTISAN MEXICAN BAKERY first opened its doors, we had a vision of creating only the finest Mexican breads prepared in the spirit of the artisan baking tradition. In a few short years we have done just that, winning praise and acceptance for our authentic recipes and classic Mexican breads throughout the Hispanic community.`
+Text: `When Artimex opened its doors, it began with a clear mission: to create exceptional Mexican breads in the spirit of the artisan tradition. Today, that vision lives in every recipe, with authentic flavor, character, and a consistency our customers can rely on.`
 
 Principles:
 
-- `Authenticity` — `Harkening back to the traditions of Mexico’s finest Artisan bakers, we strive to bake not only with our hands and our heads, but with our hearts as well.`
-- `Artisan craft` — `Whether it’s putting together the perfect mix of fresh ingredients, calculating the optimal baking time, or determining peak oven temperatures, we pride ourselves on creating a truly unique bread every time we bake.`
-- `Unrivaled quality` — `What our breads have in common is ARTIMEX ARTISAN MEXICAN BAKERY’S unrivaled quality, always steeped in a rich artisan tradition.`
+- `Authenticity` — `We honor the finest traditions of Mexican baking with recipes, flavors, and forms that feel genuinely authentic.`
+- `Artisan craft` — `From fresh ingredients and careful mixing to fermentation, bake time, and oven temperature, every detail matters.`
+- `Quality` — `Every bread and pastry is made to deliver the flavor, texture, and consistency our customers expect.`
 
 Image caption:
 
@@ -177,7 +177,7 @@ Image caption:
 
 `—St. Francis of Assisi`
 
-### About us content from the original Artimex page
+### About us content — optimized from the original Artimex page
 
 Eyebrow: `About Us`
 
@@ -187,19 +187,19 @@ Headline:
 
 `Superior Ingredients.`
 
-Text: `Bread is a special part of all of our daily lives. It’s what ties our meals together. So whether you’re looking for a light and sweet breakfast bread, or rich and savory Telera for tortas, ARTIMEX ARTISAN MEXICAN BAKERY offers a wide-array of delicious, freshly baked selections for any meal, occasion, or special celebration.`
+Text: `Bread brings people together. It belongs at our everyday meals, in our daily rituals, and at our celebrations. From light, sweet breakfast bread to savory Telera for tortas, Artimex offers a freshly baked selection for every occasion.`
 
-Text: `Over years of dedication, ARTIMEX ARTISAN MEXICAN BAKERY specialized in Mexican Bakery using the latest in flash frozen bakery technology and has created an impeccable track record of reliability, consistency and dependability. Delicious, artisan-inspired breads prepared with authentic ingredients on a daily basis: this is what sets us apart from the rest.`
+Text: `Artimex combines artisan methods with modern flash-frozen technology to deliver products that are reliable, consistent, and full of flavor. It is a smarter way to bring authentic Mexican bread to more bakery cases and more tables.`
 
-Text: `Our authentic baked goods have already garnered strong sales and wide acceptance throughout the Hispanic community. We see as validation of our product line the success we have seen in sales, but more importantly, the acceptance that we receive on a daily basis by customers of the leading Mexican restaurant/bakery chain in Southern California, EL GALLO GIRO.`
+Text: `That combination of tradition and consistency has earned strong acceptance throughout the Hispanic community. Our relationship with El Gallo Giro, one of Southern California’s leading Mexican restaurant and bakery chains, reflects the standard we work to maintain.`
 
-Text: `ARTIMEX ARTISAN MEXICAN BAKERY is the perfect solution to be your own Mexican bakery, because we help you to simplify your operations, lower your labor costs, and control your operational costs. In addition, through our high quality standards and exceptional flavor profiles, we can help you sell more!`
+Text: `For restaurants, markets, and foodservice operators, Artimex makes it possible to offer an authentic Mexican bakery program without carrying the full complexity of a traditional scratch operation.`
 
-Text: `This includes such important needs as hiring qualified bakers, creating consistent products, stocking an ample variety of baked goods that is attractive to customers, and having enough inventory to supply your demand. We help solve waste issues, the issue of investing too much money and time acquiring and then maintaining heavy equipment, and many other critical problems.`
+Text: `Reliable products, a broad assortment, flexible inventory, and less waste help reduce labor and equipment pressure while making it easier to meet demand consistently.`
 
-Text: `El Gallo Giro is a household name in Los Angeles and surrounding cities, and serves over 1,000,000 meals a year in 11 restaurants. El Gallo Giro has been a mainstay for 21 years due to its adherence to the traditional preparation techniques and original recipes. We are proud of our relationship with El Gallo Giro, and continue to provide only the freshest, best tasting bakery products for El Gallo Giro and many other restaurants and markets.`
+Text: `El Gallo Giro serves more than 1,000,000 meals each year across 11 restaurants and has built a 21-year track record around traditional preparation techniques and original recipes. We are proud of our relationship and of continuing to provide fresh, great-tasting bakery products to El Gallo Giro and many other restaurants and markets.`
 
-Text: `Click on Contact Us to find out how we can work together.`
+Text: `Visit Contact to find out how we can work together.`
 
 Button: `Products`
 
@@ -577,13 +577,13 @@ Titular:
 
 `Corazón.`
 
-Texto: `Cuando ARTIMEX ARTISAN MEXICAN BAKERY abrió sus puertas, teníamos la visión de crear únicamente los mejores panes mexicanos preparados con el espíritu de la tradición de la panadería artesanal. En pocos años lo hemos logrado, ganando elogios y aceptación por nuestras recetas auténticas y panes mexicanos clásicos en toda la comunidad hispana.`
+Texto: `Cuando Artimex abrió sus puertas, nació con una misión clara: crear panes mexicanos excepcionales en el espíritu de la tradición artesanal. Hoy, esa visión vive en cada receta, con sabores auténticos, carácter y una consistencia en la que nuestros clientes pueden confiar.`
 
 Principios:
 
-- `Autenticidad` — `Recordando las tradiciones de los mejores panaderos artesanales de México, nos esforzamos por hornear no solo con nuestras manos y nuestra mente, sino también con el corazón.`
-- `Oficio artesanal` — `Desde la mezcla perfecta de ingredientes frescos hasta calcular el tiempo óptimo de horneado y determinar la temperatura ideal del horno, nos enorgullece crear un pan verdaderamente único cada vez.`
-- `Calidad incomparable` — `Nuestros panes comparten una calidad incomparable, siempre arraigada en una rica tradición artesanal.`
+- `Autenticidad` — `Honramos las mejores tradiciones de la panadería mexicana con recetas, sabores y formas que se sienten genuinamente auténticos.`
+- `Oficio artesanal` — `Desde los ingredientes frescos y la mezcla hasta la fermentación, el tiempo de horneado y la temperatura del horno, cada detalle importa.`
+- `Calidad` — `Cada pan y cada pastel se elaboran para ofrecer el sabor, la textura y la consistencia que esperan nuestros clientes.`
 
 Texto de imagen:
 
@@ -595,7 +595,7 @@ Texto de imagen:
 
 `—San Francisco de Asís.`
 
-### Contenido de Sobre nosotros de la página original de Artimex
+### Contenido de Sobre nosotros — optimizado a partir de la página original de Artimex
 
 Eyebrow: `Sobre nosotros`
 
@@ -605,19 +605,19 @@ Titular:
 
 `Ingredientes superiores.`
 
-Texto: `El pan es una parte especial de nuestra vida diaria. Es lo que une nuestras comidas. Ya sea que busques un pan dulce y ligero para el desayuno o una Telera rica y sabrosa para tortas, ARTIMEX ARTISAN MEXICAN BAKERY ofrece una amplia variedad de selecciones deliciosas y recién horneadas para cualquier comida, ocasión o celebración especial.`
+Texto: `El pan reúne a las personas. Acompaña nuestras comidas, nuestros momentos cotidianos y nuestras celebraciones. Desde un pan dulce y ligero para el desayuno hasta una Telera sabrosa para tortas, Artimex ofrece una variedad recién horneada para cada ocasión.`
 
-Texto: `A lo largo de años de dedicación, ARTIMEX ARTISAN MEXICAN BAKERY se ha especializado en panadería mexicana utilizando la tecnología más avanzada de panificación ultracongelada y ha creado un historial impecable de confiabilidad, consistencia y seguridad. Panes deliciosos, inspirados en la artesanía y preparados diariamente con ingredientes auténticos: eso es lo que nos distingue.`
+Texto: `Artimex combina métodos artesanales con tecnología moderna de panificación ultracongelada para entregar productos confiables, consistentes y llenos de sabor. Es una forma más inteligente de llevar el pan mexicano auténtico a más vitrinas y más mesas.`
 
-Texto: `Nuestros productos horneados auténticos ya han obtenido fuertes ventas y una amplia aceptación en la comunidad hispana. Consideramos una validación de nuestra línea de productos el éxito que hemos visto en ventas, pero más importante aún, la aceptación que recibimos diariamente de los clientes de la principal cadena de restaurantes y panaderías mexicanas del sur de California, EL GALLO GIRO.`
+Texto: `Esa combinación de tradición y consistencia ha generado una fuerte aceptación en la comunidad hispana. Nuestra relación con El Gallo Giro, una de las principales cadenas de restaurantes y panaderías mexicanas del sur de California, es una muestra del estándar que buscamos mantener.`
 
-Texto: `ARTIMEX ARTISAN MEXICAN BAKERY es la solución perfecta para tener tu propia panadería mexicana, porque te ayudamos a simplificar tus operaciones, reducir los costos de mano de obra y controlar tus costos operativos. Además, mediante nuestros altos estándares de calidad y perfiles de sabor excepcionales, podemos ayudarte a vender más.`
+Texto: `Para restaurantes, mercados y operadores foodservice, Artimex permite ofrecer un programa de panadería mexicana auténtica sin asumir toda la complejidad de una operación tradicional desde cero.`
 
-Texto: `Esto incluye necesidades importantes como contratar panaderos calificados, crear productos consistentes, mantener una amplia variedad de productos horneados atractiva para los clientes y tener suficiente inventario para satisfacer la demanda. Ayudamos a resolver los problemas de merma y la inversión excesiva de tiempo y dinero en adquirir y mantener equipos pesados, además de muchos otros problemas críticos.`
+Texto: `Productos confiables, un surtido amplio, inventario flexible y menos merma ayudan a reducir la presión de mano de obra y equipo, mientras permiten responder a la demanda con mayor consistencia.`
 
-Texto: `EL GALLO GIRO es un nombre familiar en Los Ángeles y las ciudades cercanas, y sirve más de 1,000,000 de comidas al año en 11 restaurantes. El Gallo Giro ha sido un pilar durante 21 años gracias a su adhesión a las técnicas tradicionales de preparación y recetas originales. Estamos orgullosos de nuestra relación con El Gallo Giro y continuamos proporcionando los productos de panadería más frescos y sabrosos para El Gallo Giro y muchos otros restaurantes y mercados.`
+Texto: `El Gallo Giro atiende a más de 1,000,000 de personas al año en 11 restaurantes y mantiene una trayectoria de 21 años basada en técnicas tradicionales y recetas originales. Nos enorgullece nuestra relación y seguir ofreciendo productos frescos y sabrosos a El Gallo Giro y a muchos otros restaurantes y mercados.`
 
-Texto: `Haz clic en Contacto para descubrir cómo podemos trabajar juntos.`
+Texto: `Visita Contacto para descubrir cómo podemos trabajar juntos.`
 
 Botón: `Productos`
 

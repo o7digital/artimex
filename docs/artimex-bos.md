@@ -199,6 +199,8 @@ Text: `This includes such important needs as hiring qualified bakers, creating c
 
 Text: `El Gallo Giro is a household name in Los Angeles and surrounding cities, and serves over 1,000,000 meals a year in 11 restaurants. El Gallo Giro has been a mainstay for 21 years due to its adherence to the traditional preparation techniques and original recipes. We are proud of our relationship with El Gallo Giro, and continue to provide only the freshest, best tasting bakery products for El Gallo Giro and many other restaurants and markets.`
 
+Text: `Click on Contact Us to find out how we can work together.`
+
 Button: `Products`
 
 Validation: [ ] Approved as written  [ ] Changes requested
@@ -614,6 +616,8 @@ Texto: `ARTIMEX ARTISAN MEXICAN BAKERY es la solución perfecta para tener tu pr
 Texto: `Esto incluye necesidades importantes como contratar panaderos calificados, crear productos consistentes, mantener una amplia variedad de productos horneados atractiva para los clientes y tener suficiente inventario para satisfacer la demanda. Ayudamos a resolver los problemas de merma y la inversión excesiva de tiempo y dinero en adquirir y mantener equipos pesados, además de muchos otros problemas críticos.`
 
 Texto: `EL GALLO GIRO es un nombre familiar en Los Ángeles y las ciudades cercanas, y sirve más de 1,000,000 de comidas al año en 11 restaurantes. El Gallo Giro ha sido un pilar durante 21 años gracias a su adhesión a las técnicas tradicionales de preparación y recetas originales. Estamos orgullosos de nuestra relación con El Gallo Giro y continuamos proporcionando los productos de panadería más frescos y sabrosos para El Gallo Giro y muchos otros restaurantes y mercados.`
+
+Texto: `Haz clic en Contacto para descubrir cómo podemos trabajar juntos.`
 
 Botón: `Productos`
 

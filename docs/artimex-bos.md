@@ -1,33 +1,69 @@
-# Artimex Website Content
+# Artimex Website Sitemap & Content
 
 ## Client validation draft
 
-This document reproduces the customer-facing website copy currently implemented in Artimex. The English content appears first, followed by the Spanish localization. Please review the wording exactly as written.
+This document follows the visible Artimex website navigation exactly. The current implementation is one homepage with anchored sections; the items below are the sitemap entries shown in the header.
 
-For each section, the client can mark:
+The English sitemap and content appear first. The Spanish sitemap and content follow in the same order.
+
+For every item:
 
 - [ ] Approved as written
 - [ ] Changes requested
 
 Client notes: ________________________________________________________________
 
+## Sitemap
+
+| # | Navigation item | Current destination |
+| --- | --- | --- |
+| 1 | `Home` | `/` / `#top` |
+| 2 | `Our story` | `#story` |
+| 3 | `Fresh / B2C` | `#fresh-products` |
+| 4 | `Frozen / B2B` | `#frozen-products` |
+| 5 | `Products` | `#shop` |
+| 6 | `Careers` | `#careers` |
+| 7 | `Contact` | `#contact` |
+
 ---
 
-# Part 1 — English content
+# Part 1 — English
 
-## Site metadata
+## 1. Home
 
-**Page title:** `Artimex — Artisan Mexican Bakery`
+**Current destination:** `/`
+
+### SEO metadata for approval
+
+**Meta title:** `Artimex — Artisan Mexican Bakery`
 
 **Meta description:** `Artimex Artisan Mexican Bakery — authentic Mexican breads, fresh for retail and frozen ready-to-bake for wholesale.`
 
-## Announcement bar and header
+**Meta keywords:** `Artimex, artisan Mexican bakery, authentic Mexican bread, fresh bakery, frozen ready-to-bake, wholesale bakery, foodservice, Southern California`
 
-**Announcement:** `Authentic Mexican bakery • Southern California`
+### Homepage structure
 
-**Announcement link:** `Wholesale & foodservice`
+The homepage displays the following content in this order:
 
-**Navigation:**
+1. Announcement bar and header navigation.
+2. Hero.
+3. Product category marquee.
+4. Fresh and frozen customer journeys.
+5. Product experience introduced by `Two ways to enjoy Artimex`.
+6. The Artimex standard.
+7. From the original Artimex archive.
+8. Artimex for business.
+9. From freezer to bakery case.
+10. Opportunities at Artimex.
+11. Contact block and footer.
+
+### Announcement bar
+
+`Authentic Mexican bakery • Southern California`
+
+Link: `Wholesale & foodservice`
+
+### Header navigation
 
 - `Home`
 - `Our story`
@@ -37,128 +73,161 @@ Client notes: ________________________________________________________________
 - `Careers`
 - `Contact`
 
-**Header actions:**
+Header actions:
 
 - Language switch: `ES`
-- Main button: `Shop the bakery`
+- Button: `Shop the bakery`
 - Mobile menu label: `Menu`
 - Mobile close label: `Close`
-- Mobile contact: `sales@artimex.com`
 - Mobile language link: `Ver en español`
+- Mobile contact: `sales@artimex.com`
 
-Validation: [ ] Approved as written  [ ] Changes requested
+### Hero
 
-Notes: ______________________________________________________________________
+Eyebrow: `Authenticity • Tradition • Superior ingredients`
 
-## Authenticity • Tradition • Superior ingredients
-
-**Eyebrow:** `Authenticity • Tradition • Superior ingredients`
-
-**Headline:**
+Headline:
 
 `Mexican baking,`
 
 `made to move.`
 
-**Lead:**
+Text: `Artisan breads and pastries made with the flavor, texture and spirit of a real panadería — fresh for today, frozen and ready-to-bake for scale.`
 
-`Artisan breads and pastries made with the flavor, texture and spirit of a real panadería — fresh for today, frozen and ready-to-bake for scale.`
+Buttons: `Shop fresh` · `Explore wholesale`
 
-**Buttons:**
-
-- `Shop fresh`
-- `Explore wholesale`
-
-**Hero labels:**
+Hero labels:
 
 - `Fresh` — `B2C bakery assortment`
 - `Frozen` — `B2B ready-to-bake program`
 - `Authentic` — `Mexican recipes & craft`
 
-**Hero image labels:**
+Hero labels over the imagery:
 
 - `Concha rosa`
 - `Empanada`
 - `130+` — `authentic recipes`
 - `Pan hecho con corazón.`
 
-**Hero image alternative text:** `Original Artimex assortment of Mexican breads and pastries`
-
-Validation: [ ] Approved as written  [ ] Changes requested
-
-Notes: ______________________________________________________________________
-
-## Product categories
+### Product category marquee
 
 `CONCHAS` · `EMPANADAS` · `BOLILLOS` · `CAMPECHANAS` · `PAN FINO` · `POLVORONES` · `TELERAS` · `OREJAS` · `FOODSERVICE`
 
+### Customer journeys shown on Home
+
+**Fresh from our ovens**
+
+Audience: `For home & family`
+
+Text: `Build your box with the Mexican breads your family loves, baked locally with superior ingredients.`
+
+Button: `Shop fresh`
+
+**Your bakery, made simpler**
+
+Audience: `For retail & foodservice`
+
+Text: `Frozen dough and fully baked programs with dependable quality, lower waste and less labor.`
+
+Button: `Explore wholesale`
+
 Validation: [ ] Approved as written  [ ] Changes requested
 
 Notes: ______________________________________________________________________
 
-## Fresh from our ovens
+## 2. Our story
 
-**Audience label:** `For home & family`
+**Current destination:** `#story`
 
-**Headline:**
+### SEO metadata for approval
+
+**Meta title:** `Artimex — Our Story | Artisan Mexican Bakery`
+
+**Meta description:** `The Artimex standard: Mexican baking made with authenticity, tradition, superior ingredients and modern consistency.`
+
+**Meta keywords:** `Artimex story, Mexican baking tradition, artisan bakery, authentic Mexican bread, superior ingredients, bakery consistency`
+
+### The Artimex standard
+
+Eyebrow: `The Artimex standard`
+
+Headline:
+
+`Hands. Head.`
+
+`Heart.`
+
+Text: `We approach Mexican baking as a craft: the right ingredients, the right fermentation, the right heat — and the discipline to make every batch worthy of the tradition behind it.`
+
+Principles:
+
+- `Authenticity` — `Classic Mexican breads with recognizable flavor, shape and texture.`
+- `Consistency` — `A repeatable bakery program designed for dependable daily results.`
+- `Superior ingredients` — `Quality starts before the oven — with a better base and careful handling.`
+
+Image caption:
+
+`Traditional form.`
+
+`Modern consistency.`
+
+### From the original Artimex archive
+
+Eyebrow: `From the original Artimex archive`
+
+Headline:
+
+`A tradition that`
+
+`keeps moving forward.`
+
+Text: `These images belong to the visual history of Artimex: breads made with craft, color and generosity since the brand’s earliest days.`
+
+Button: `Products`
+
+Validation: [ ] Approved as written  [ ] Changes requested
+
+Notes: ______________________________________________________________________
+
+## 3. Fresh / B2C
+
+**Current destination:** `#fresh-products`
+
+### SEO metadata for approval
+
+**Meta title:** `Artimex Fresh Bakery — Mexican Bread for Home & Family`
+
+**Meta description:** `Fresh Mexican breads and pastries from Artimex, baked locally with superior ingredients for home and family.`
+
+**Meta keywords:** `fresh Mexican bread, Mexican pastries, conchas, bolillos, teleras, empanadas, fresh bakery, Artimex B2C`
+
+### Fresh journey
+
+Audience: `For home & family`
+
+Headline:
 
 `Fresh from`
 
 `our ovens.`
 
-**Text:** `Build your box with the Mexican breads your family loves, baked locally with superior ingredients.`
+Text: `Build your box with the Mexican breads your family loves, baked locally with superior ingredients.`
 
-**Button:** `Shop fresh`
+Button: `Shop fresh`
 
-## Your bakery, made simpler
+### Fresh bakery catalogue
 
-**Audience label:** `For retail & foodservice`
+Tab: `Fresh bakery`
 
-**Headline:**
+Eyebrow: `The Artimex collection`
 
-`Your bakery,`
+Title: `Find your favorite.`
 
-`made simpler.`
+Filter label: `Product filters`
 
-**Text:** `Frozen dough and fully baked programs with dependable quality, lower waste and less labor.`
+Filter options: `All` · `Conchas` · `Savory` · `Pastries`
 
-**Button:** `Explore wholesale`
-
-Validation: [ ] Approved as written  [ ] Changes requested
-
-Notes: ______________________________________________________________________
-
-## Two ways to enjoy Artimex
-
-**Eyebrow:** `Two ways to enjoy Artimex`
-
-**Headline:**
-
-`Fresh for the table.`
-
-`Frozen for the business.`
-
-**Text:** `One product philosophy, two eCommerce journeys. Customers can buy freshly prepared bakery items, while restaurants and markets can build wholesale ready-to-bake orders.`
-
-Validation: [ ] Approved as written  [ ] Changes requested
-
-Notes: ______________________________________________________________________
-
-## The Artimex collection
-
-**Tab label:** `Fresh bakery`
-
-**Eyebrow:** `The Artimex collection`
-
-**Title:** `Find your favorite.`
-
-**Filter label:** `Product filters`
-
-**Filter options:** `All` · `Conchas` · `Savory` · `Pastries`
-
-**Button on each product:** `Add to basket`
-
-### Fresh products
+Product button: `Add to basket`
 
 | Product | Description | Label |
 | --- | --- | --- |
@@ -169,38 +238,61 @@ Notes: ______________________________________________________________________
 | `Concha Rosa` | `Soft enriched dough · Pink shell` | `Customer favorite` |
 | `Concha Chocolate` | `Soft enriched dough · Cocoa shell` | `Traditional recipe` |
 
-**Basket drawer:**
+Basket content:
 
 - Label: `Basket`
 - Button: `Review`
-- Selection heading: `Demonstration selection`
-- Empty/demo note: `Demo basket — checkout and live pricing will connect to the future backend.`
-- Quantity controls: `−` and `+`
+- Heading: `Demonstration selection`
+- Note: `Demo basket — checkout and live pricing will connect to the future backend.`
 - Close button: `Close selection`
 
 Validation: [ ] Approved as written  [ ] Changes requested
 
 Notes: ______________________________________________________________________
 
-## Artimex bake-off program
+## 4. Frozen / B2B
 
-**Tab label:** `Frozen wholesale`
+**Current destination:** `#frozen-products`
 
-**Eyebrow:** `Artimex bake-off program`
+### SEO metadata for approval
 
-**Title:** `Authentic variety. Operational control.`
+**Meta title:** `Artimex Frozen Wholesale — Ready-to-Bake Mexican Bakery`
 
-**Text:** `Stock a complete Mexican bakery without adding specialized bakers, heavy equipment or daily production risk.`
+**Meta description:** `Frozen dough and fully baked Mexican bakery products for restaurants, retailers and foodservice operators.`
 
-**Programme highlights:**
+**Meta keywords:** `frozen Mexican bakery, ready-to-bake bakery, wholesale bread, foodservice bakery, frozen dough, bake-off program, Artimex B2B`
+
+### Frozen journey
+
+Audience: `For retail & foodservice`
+
+Headline:
+
+`Your bakery,`
+
+`made simpler.`
+
+Text: `Frozen dough and fully baked programs with dependable quality, lower waste and less labor.`
+
+Button: `Explore wholesale`
+
+### Frozen wholesale programme
+
+Tab: `Frozen wholesale`
+
+Eyebrow: `Artimex bake-off program`
+
+Title: `Authentic variety. Operational control.`
+
+Text: `Stock a complete Mexican bakery without adding specialized bakers, heavy equipment or daily production risk.`
+
+Programme highlights:
 
 - `Up to 6-month frozen shelf life`
 - `Consistent case and pallet formats`
 - `Custom retail programs available`
 
-**Button:** `Request full catalog`
-
-### Wholesale products
+Button: `Request full catalog`
 
 | Product | Format | Case | Unit weight | Pallet | Preparation |
 | --- | --- | --- | --- | --- | --- |
@@ -209,184 +301,127 @@ Notes: ______________________________________________________________________
 | `Assorted Mexican Breads` | `Individually wrapped` | `Custom program` | `Varies` | `On request` | `Thaw or bake to finish` |
 | `Empanadas` | `Frozen / fully baked` | `60 units` | `4 oz` | `Custom` | `Bake from prepared state` |
 
-**Product list labels:** `Case` · `Pallet`
-
-**Wholesale inquiry drawer:**
+Inquiry content:
 
 - Label: `Wholesale inquiry`
 - Button: `Review`
 - Heading: `Demonstration selection`
 - Button: `Send wholesale inquiry`
 - Close button: `Close selection`
-
-**Wholesale email subject:** `Artimex wholesale inquiry`
-
-**Wholesale email body:**
-
-`Hello Artimex,`
-
-`I would like information about:`
-
-`Business name:`
-
-`Delivery area:`
+- Email subject: `Artimex wholesale inquiry`
+- Email opening: `Hello Artimex,`
+- Email line: `I would like information about:`
+- Email field: `Business name:`
+- Email field: `Delivery area:`
 
 Validation: [ ] Approved as written  [ ] Changes requested
 
 Notes: ______________________________________________________________________
 
-## The Artimex standard
+## 5. Products
 
-**Eyebrow:** `The Artimex standard`
+**Current destination:** `#shop`
 
-**Headline:**
+### SEO metadata for approval
 
-`Hands. Head.`
+**Meta title:** `Artimex Products — Fresh & Frozen Mexican Bakery`
 
-`Heart.`
+**Meta description:** `Explore the Artimex collection of fresh Mexican breads and frozen ready-to-bake products for wholesale and foodservice.`
 
-**Text:** `We approach Mexican baking as a craft: the right ingredients, the right fermentation, the right heat — and the discipline to make every batch worthy of the tradition behind it.`
+**Meta keywords:** `Artimex products, Mexican bakery products, conchas, empanadas, bolillos, teleras, fresh bread, frozen wholesale catalogue`
 
-**Principles:**
+### Products section introduction
 
-- `Authenticity` — `Classic Mexican breads with recognizable flavor, shape and texture.`
-- `Consistency` — `A repeatable bakery program designed for dependable daily results.`
-- `Superior ingredients` — `Quality starts before the oven — with a better base and careful handling.`
+Eyebrow: `Two ways to enjoy Artimex`
 
-**Image caption:**
+Headline:
 
-`Traditional form.`
+`Fresh for the table.`
 
-`Modern consistency.`
+`Frozen for the business.`
 
-**Image alternative text:** `Original Artimex conchas`
+Text: `One product philosophy, two eCommerce journeys. Customers can buy freshly prepared bakery items, while restaurants and markets can build wholesale ready-to-bake orders.`
 
-Validation: [ ] Approved as written  [ ] Changes requested
+Product modes:
 
-Notes: ______________________________________________________________________
+- `Fresh bakery` — `B2C`
+- `Frozen wholesale` — `B2B`
 
-## From the original Artimex archive
-
-**Eyebrow:** `From the original Artimex archive`
-
-**Headline:**
-
-`A tradition that`
-
-`keeps moving forward.`
-
-**Text:** `These images belong to the visual history of Artimex: breads made with craft, color and generosity since the brand’s earliest days.`
-
-**Button:** `Products`
-
-**Image alternative text:**
-
-- `Historic Artimex sweet bread assortment`
-- `Original Artimex empanadas`
+The Fresh / B2C and Frozen / B2B product copy and product lists are reproduced in items 3 and 4 above.
 
 Validation: [ ] Approved as written  [ ] Changes requested
 
 Notes: ______________________________________________________________________
 
-## Artimex for business
+## 6. Careers
 
-**Eyebrow:** `Artimex for business`
+**Current destination:** `#careers`
 
-**Headline:**
+### SEO metadata for approval
 
-`Your bakery program,`
+**Meta title:** `Careers at Artimex — Artisan Mexican Bakery`
 
-`without the bakery headache.`
+**Meta description:** `Join Artimex and help bring authentic Mexican bread further through craft, quality and tradition.`
 
-**Text:** `Frozen, ready-to-bake products help restaurants, grocers and foodservice operators expand assortment while reducing skilled labor pressure, waste and day-to-day complexity.`
+**Meta keywords:** `Artimex careers, bakery jobs, Mexican bakery team, artisan baking careers, food production jobs, Southern California`
 
-**Production figures displayed:**
+### Careers content
 
-- `25M` — `pieces produced annually`
-- `1M+` — `weekly production capacity`
-- `3` — `specialized production lines`
-- `6 mo.` — `frozen shelf life`
+Eyebrow: `Opportunities at Artimex`
 
-**Benefits:**
-
-- `Lower labor pressure` — `Serve an authentic Mexican bakery assortment without building a full scratch bakery team.`
-- `Predictable output` — `Standardized products give your operation a more consistent bake, yield and presentation.`
-- `Control waste` — `Bake closer to demand and keep a broader assortment available with less finished-product exposure.`
-
-**Buttons:** `Request wholesale access` · `Talk to sales`
-
-Validation: [ ] Approved as written  [ ] Changes requested
-
-Notes: ______________________________________________________________________
-
-## From freezer to bakery case
-
-**Eyebrow:** `From freezer to bakery case`
-
-**Headline:**
-
-`A simpler path to`
-
-`a better bake.`
-
-**Steps:**
-
-- `Stock` — `Keep your core assortment frozen until the operation needs it.`
-- `Prepare` — `Follow the product-specific thaw, proof or staging process.`
-- `Bake` — `Finish in your oven for fresh aroma, texture and bakery-case appeal.`
-- `Sell` — `Offer authentic pan mexicano with less operational friction.`
-
-Validation: [ ] Approved as written  [ ] Changes requested
-
-Notes: ______________________________________________________________________
-
-## Opportunities at Artimex
-
-**Eyebrow:** `Opportunities at Artimex`
-
-**Headline:**
+Headline:
 
 `Grow with`
 
 `us.`
 
-**Text:** `Passionate about craft, quality and working with a team that honors tradition? We would like to learn about your experience for future opportunities at Artimex.`
+Text: `Passionate about craft, quality and working with a team that honors tradition? We would like to learn about your experience for future opportunities at Artimex.`
 
-**Card label:** `Future opportunities`
+Card label: `Future opportunities`
 
-**Card text:** `Help us bring authentic Mexican bread even further.`
+Card text: `Help us bring authentic Mexican bread even further.`
 
-**Button:** `Share your experience`
+Button: `Share your experience`
 
-**Email subject:** `Careers at Artimex`
+Email subject: `Careers at Artimex`
 
 Validation: [ ] Approved as written  [ ] Changes requested
 
 Notes: ______________________________________________________________________
 
-## Fresh bakery • Wholesale • Foodservice
+## 7. Contact
 
-**Eyebrow:** `Fresh bakery • Wholesale • Foodservice`
+**Current destination:** `#contact`
 
-**Headline:**
+### SEO metadata for approval
+
+**Meta title:** `Contact Artimex — Fresh Bakery, Wholesale & Foodservice`
+
+**Meta description:** `Contact Artimex for retail orders, wholesale programmes, distribution questions and foodservice assortments.`
+
+**Meta keywords:** `contact Artimex, wholesale bakery inquiry, Mexican bakery supplier, foodservice bakery, Santa Fe Springs bakery, sales@artimex.com`
+
+### Contact content
+
+Eyebrow: `Fresh bakery • Wholesale • Foodservice`
+
+Headline:
 
 `Bring Artimex`
 
 `to your table.`
 
-**Text:** `For retail orders, wholesale programs, distribution questions or a custom foodservice assortment, talk with the Artimex team.`
+Text: `For retail orders, wholesale programs, distribution questions or a custom foodservice assortment, talk with the Artimex team.`
 
-**Contact labels:**
+Contact details:
 
 - `Email sales` — `sales@artimex.com`
 - `Call us` — `562 777 0924`
 - `Visit` — `12764 Florence Avenue` / `Santa Fe Springs, CA 90670`
 
-**Footer statement:** `Authentic Mexican bread, made with craft and built for consistency.`
+Footer statement: `Authentic Mexican bread, made with craft and built for consistency.`
 
-**Footer links:** `Home` · `Our story` · `Fresh` · `Frozen` · `Careers` · `Contact`
-
-**Copyright:** `© [current year] Artimex Artisan Mexican Bakery.`
+Footer links: `Home` · `Our story` · `Fresh` · `Frozen` · `Careers` · `Contact`
 
 Validation: [ ] Approved as written  [ ] Changes requested
 
@@ -394,21 +429,41 @@ Notes: ______________________________________________________________________
 
 ---
 
-# Part 2 — Spanish content
+# Part 2 — Español
 
-## Metadatos del sitio
+## 1. Inicio
 
-**Título de la página:** `Artimex — Panadería Mexicana Artesanal`
+**Destino actual:** `/es/`
+
+### Metadatos SEO para aprobación
+
+**Título meta:** `Artimex — Panadería Mexicana Artesanal`
 
 **Descripción meta:** `Artimex Artisan Mexican Bakery — auténtico pan mexicano fresco para consumidores y congelado listo para hornear para mayoreo.`
 
-## Barra de anuncio y encabezado
+**Palabras clave meta:** `Artimex, panadería mexicana artesanal, pan mexicano auténtico, pan fresco, pan congelado listo para hornear, mayoreo, foodservice, Sur de California`
 
-**Anuncio:** `Panadería mexicana auténtica • Sur de California`
+### Estructura del inicio
 
-**Enlace del anuncio:** `Mayoreo y foodservice`
+1. Barra de anuncio y navegación.
+2. Hero.
+3. Marquee de categorías de productos.
+4. Recorridos fresco y congelado.
+5. Introducción de productos con `Dos formas de disfrutar Artimex`.
+6. El estándar Artimex.
+7. Del archivo original de Artimex.
+8. Artimex para negocios.
+9. Del congelador a la vitrina.
+10. Oportunidades en Artimex.
+11. Contacto y pie de página.
 
-**Navegación:**
+### Barra de anuncio
+
+`Panadería mexicana auténtica • Sur de California`
+
+Enlace: `Mayoreo y foodservice`
+
+### Navegación
 
 - `Inicio`
 - `Nuestra historia`
@@ -418,128 +473,161 @@ Notes: ______________________________________________________________________
 - `Empleo`
 - `Contacto`
 
-**Acciones del encabezado:**
+Acciones del encabezado:
 
 - Cambio de idioma: `EN`
-- Botón principal: `Comprar pan`
+- Botón: `Comprar pan`
 - Etiqueta del menú móvil: `Menú`
 - Etiqueta para cerrar: `Cerrar`
-- Contacto móvil: `sales@artimex.com`
 - Enlace de idioma móvil: `View in English`
+- Contacto móvil: `sales@artimex.com`
 
-Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
+### Hero
 
-Notas: ______________________________________________________________________
+Eyebrow: `Autenticidad • Tradición • Ingredientes superiores`
 
-## Autenticidad • Tradición • Ingredientes superiores
-
-**Eyebrow:** `Autenticidad • Tradición • Ingredientes superiores`
-
-**Titular:**
+Titular:
 
 `Pan mexicano,`
 
 `hecho para llegar más lejos.`
 
-**Texto principal:**
+Texto: `Panes y pasteles artesanales con el sabor, la textura y el espíritu de una auténtica panadería — frescos para hoy, congelados y listos para hornear a escala.`
 
-`Panes y pasteles artesanales con el sabor, la textura y el espíritu de una auténtica panadería — frescos para hoy, congelados y listos para hornear a escala.`
+Botones: `Comprar fresco` · `Ver mayoreo`
 
-**Botones:**
-
-- `Comprar fresco`
-- `Ver mayoreo`
-
-**Etiquetas del hero:**
+Etiquetas del hero:
 
 - `Fresh` — `Selección fresca B2C`
 - `Frozen` — `Programa B2B listo para hornear`
 - `Auténtico` — `Recetas y oficio mexicano`
 
-**Etiquetas de imágenes:**
+Etiquetas sobre las imágenes:
 
 - `Concha rosa`
 - `Empanada`
 - `130+` — `recetas auténticas`
 - `Pan hecho con corazón.`
 
-**Texto alternativo de la imagen principal:** `Surtido original de panes y pasteles mexicanos Artimex`
-
-Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
-
-Notas: ______________________________________________________________________
-
-## Categorías de productos
+### Marquee de categorías
 
 `CONCHAS` · `EMPANADAS` · `BOLILLOS` · `CAMPECHANAS` · `PAN FINO` · `POLVORONES` · `TELERAS` · `OREJAS` · `FOODSERVICE`
 
+### Recorridos mostrados en Inicio
+
+**Fresco desde nuestros hornos**
+
+Audiencia: `Para casa y familia`
+
+Texto: `Arma tu caja con los panes mexicanos que ama tu familia, horneados localmente con ingredientes superiores.`
+
+Botón: `Comprar fresco`
+
+**Tu panadería, más simple**
+
+Audiencia: `Para retail y foodservice`
+
+Texto: `Masa congelada y productos terminados con calidad constante, menor merma y menos mano de obra.`
+
+Botón: `Ver mayoreo`
+
 Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
 
 Notas: ______________________________________________________________________
 
-## Fresco desde nuestros hornos
+## 2. Nuestra historia
 
-**Etiqueta de audiencia:** `Para casa y familia`
+**Destino actual:** `#story`
 
-**Titular:**
+### Metadatos SEO para aprobación
+
+**Título meta:** `Artimex — Nuestra historia | Panadería Mexicana Artesanal`
+
+**Descripción meta:** `El estándar Artimex: pan mexicano hecho con autenticidad, tradición, ingredientes superiores y consistencia moderna.`
+
+**Palabras clave meta:** `historia de Artimex, tradición del pan mexicano, panadería artesanal, pan mexicano auténtico, ingredientes superiores, consistencia`
+
+### El estándar Artimex
+
+Eyebrow: `El estándar Artimex`
+
+Titular:
+
+`Manos. Mente.`
+
+`Corazón.`
+
+Texto: `Hacemos pan mexicano como un oficio: ingredientes correctos, fermentación precisa, calor exacto y la disciplina para que cada lote honre la tradición.`
+
+Principios:
+
+- `Autenticidad` — `Panes mexicanos clásicos con sabor, forma y textura reconocibles.`
+- `Consistencia` — `Un programa repetible diseñado para resultados confiables cada día.`
+- `Ingredientes superiores` — `La calidad comienza antes del horno, con una mejor base y un manejo cuidadoso.`
+
+Texto de imagen:
+
+`Forma tradicional.`
+
+`Consistencia moderna.`
+
+### Del archivo original de Artimex
+
+Eyebrow: `Del archivo original de Artimex`
+
+Titular:
+
+`Una tradición que`
+
+`sigue creciendo.`
+
+Texto: `Estas imágenes pertenecen a la historia visual de Artimex: panes hechos con oficio, color y generosidad desde el origen de la marca.`
+
+Botón: `Productos`
+
+Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
+
+Notas: ______________________________________________________________________
+
+## 3. Fresco / B2C
+
+**Destino actual:** `#fresh-products`
+
+### Metadatos SEO para aprobación
+
+**Título meta:** `Artimex Pan Fresco — Pan Mexicano para Casa y Familia`
+
+**Descripción meta:** `Panes y pasteles mexicanos frescos de Artimex, horneados localmente con ingredientes superiores para casa y familia.`
+
+**Palabras clave meta:** `pan mexicano fresco, pasteles mexicanos, conchas, bolillos, teleras, empanadas, panadería fresca, Artimex B2C`
+
+### Recorrido fresco
+
+Audiencia: `Para casa y familia`
+
+Titular:
 
 `Fresco desde`
 
 `nuestros hornos.`
 
-**Texto:** `Arma tu caja con los panes mexicanos que ama tu familia, horneados localmente con ingredientes superiores.`
+Texto: `Arma tu caja con los panes mexicanos que ama tu familia, horneados localmente con ingredientes superiores.`
 
-**Botón:** `Comprar fresco`
+Botón: `Comprar fresco`
 
-## Tu panadería, más simple
+### Catálogo de pan fresco
 
-**Etiqueta de audiencia:** `Para retail y foodservice`
+Pestaña: `Pan fresco`
 
-**Titular:**
+Eyebrow: `La colección Artimex`
 
-`Tu panadería,`
+Título: `Encuentra tu favorito.`
 
-`más simple.`
+Etiqueta de filtros: `Filtros de producto`
 
-**Texto:** `Masa congelada y productos terminados con calidad constante, menor merma y menos mano de obra.`
+Opciones de filtro: `Todos` · `Conchas` · `Savory` · `Pastries`
 
-**Botón:** `Ver mayoreo`
-
-Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
-
-Notas: ______________________________________________________________________
-
-## Dos formas de disfrutar Artimex
-
-**Eyebrow:** `Dos formas de disfrutar Artimex`
-
-**Titular:**
-
-`Fresco para la mesa.`
-
-`Congelado para el negocio.`
-
-**Texto:** `Una misma filosofía de producto, dos experiencias. El consumidor elige pan recién preparado; restaurantes y mercados construyen pedidos profesionales listos para hornear.`
-
-Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
-
-Notas: ______________________________________________________________________
-
-## La colección Artimex
-
-**Etiqueta de pestaña:** `Pan fresco`
-
-**Eyebrow:** `La colección Artimex`
-
-**Título:** `Encuentra tu favorito.`
-
-**Etiqueta de filtros:** `Filtros de producto`
-
-**Opciones de filtro:** `Todos` · `Conchas` · `Savory` · `Pastries`
-
-**Botón en cada producto:** `Agregar a la canasta`
-
-### Productos frescos
+Botón de producto: `Agregar a la canasta`
 
 | Producto | Descripción | Etiqueta |
 | --- | --- | --- |
@@ -550,38 +638,61 @@ Notas: ______________________________________________________________________
 | `Concha Rosa` | `Masa suave · Cubierta rosa` | `Favorita del público` |
 | `Concha de Chocolate` | `Masa suave · Cubierta de cacao` | `Receta tradicional` |
 
-**Cajón de canasta:**
+Contenido de la canasta:
 
 - Etiqueta: `Canasta`
 - Botón: `Revisar`
-- Encabezado de selección: `Selección demostrativa`
-- Nota demo: `Canasta demo — precios y pago se conectarán al futuro backend.`
-- Controles de cantidad: `−` y `+`
+- Encabezado: `Selección demostrativa`
+- Nota: `Canasta demo — precios y pago se conectarán al futuro backend.`
 - Botón para cerrar: `Cerrar selección`
 
 Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
 
 Notas: ______________________________________________________________________
 
-## Programa Artimex Bake-Off
+## 4. Congelado / B2B
 
-**Etiqueta de pestaña:** `Mayoreo congelado`
+**Destino actual:** `#frozen-products`
 
-**Eyebrow:** `Programa Artimex Bake-Off`
+### Metadatos SEO para aprobación
 
-**Título:** `Variedad auténtica. Control operativo.`
+**Título meta:** `Artimex Mayoreo Congelado — Panadería Mexicana Lista para Hornear`
 
-**Texto:** `Abastece una panadería mexicana completa sin sumar panaderos especializados, equipo pesado ni riesgo de producción diaria.`
+**Descripción meta:** `Masa congelada y productos de panadería mexicana completamente horneados para restaurantes, retail y foodservice.`
 
-**Beneficios del programa:**
+**Palabras clave meta:** `panadería mexicana congelada, pan listo para hornear, pan de mayoreo, panadería foodservice, masa congelada, programa bake-off, Artimex B2B`
+
+### Recorrido congelado
+
+Audiencia: `Para retail y foodservice`
+
+Titular:
+
+`Tu panadería,`
+
+`más simple.`
+
+Texto: `Masa congelada y productos terminados con calidad constante, menor merma y menos mano de obra.`
+
+Botón: `Ver mayoreo`
+
+### Programa de mayoreo congelado
+
+Pestaña: `Mayoreo congelado`
+
+Eyebrow: `Programa Artimex Bake-Off`
+
+Título: `Variedad auténtica. Control operativo.`
+
+Texto: `Abastece una panadería mexicana completa sin sumar panaderos especializados, equipo pesado ni riesgo de producción diaria.`
+
+Beneficios del programa:
 
 - `Hasta 6 meses de conservación congelada`
 - `Formatos consistentes de caja y tarima`
 - `Programas personalizados disponibles`
 
-**Botón:** `Solicitar catálogo completo`
-
-### Productos de mayoreo
+Botón: `Solicitar catálogo completo`
 
 | Producto | Formato | Caja | Peso unitario | Tarima | Preparación |
 | --- | --- | --- | --- | --- | --- |
@@ -590,184 +701,125 @@ Notas: ______________________________________________________________________
 | `Surtido de Pan Mexicano` | `Empacado individualmente` | `Custom program` | `Varies` | `On request` | `Descongelar o terminar en horno` |
 | `Empanadas` | `Congeladas / completamente horneadas` | `60 units` | `4 oz` | `Custom` | `Hornear desde el estado preparado` |
 
-**Etiquetas de productos:** `Caja` · `Tarima`
-
-**Cajón de solicitud mayorista:**
+Contenido de la solicitud:
 
 - Etiqueta: `Solicitud mayorista`
 - Botón: `Revisar`
 - Encabezado: `Selección demostrativa`
 - Botón: `Enviar solicitud mayorista`
 - Botón para cerrar: `Cerrar selección`
-
-**Asunto del correo:** `Artimex wholesale inquiry`
-
-**Cuerpo del correo:**
-
-`Hello Artimex,`
-
-`I would like information about:`
-
-`Business name:`
-
-`Delivery area:`
+- Asunto del correo: `Artimex wholesale inquiry`
+- Inicio del correo: `Hello Artimex,`
+- Línea del correo: `I would like information about:`
+- Campo del correo: `Business name:`
+- Campo del correo: `Delivery area:`
 
 Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
 
 Notas: ______________________________________________________________________
 
-## El estándar Artimex
+## 5. Productos
 
-**Eyebrow:** `El estándar Artimex`
+**Destino actual:** `#shop`
 
-**Titular:**
+### Metadatos SEO para aprobación
 
-`Manos. Mente.`
+**Título meta:** `Productos Artimex — Panadería Mexicana Fresca y Congelada`
 
-`Corazón.`
+**Descripción meta:** `Explora la colección Artimex de panes mexicanos frescos y productos congelados listos para hornear para mayoreo y foodservice.`
 
-**Texto:** `Hacemos pan mexicano como un oficio: ingredientes correctos, fermentación precisa, calor exacto y la disciplina para que cada lote honre la tradición.`
+**Palabras clave meta:** `productos Artimex, productos de panadería mexicana, conchas, empanadas, bolillos, teleras, pan fresco, catálogo de mayoreo congelado`
 
-**Principios:**
+### Introducción de productos
 
-- `Autenticidad` — `Panes mexicanos clásicos con sabor, forma y textura reconocibles.`
-- `Consistencia` — `Un programa repetible diseñado para resultados confiables cada día.`
-- `Ingredientes superiores` — `La calidad comienza antes del horno, con una mejor base y un manejo cuidadoso.`
+Eyebrow: `Dos formas de disfrutar Artimex`
 
-**Texto de imagen:**
+Titular:
 
-`Forma tradicional.`
+`Fresco para la mesa.`
 
-`Consistencia moderna.`
+`Congelado para el negocio.`
 
-**Texto alternativo de la imagen:** `Conchas originales de Artimex`
+Texto: `Una misma filosofía de producto, dos experiencias. El consumidor elige pan recién preparado; restaurantes y mercados construyen pedidos profesionales listos para hornear.`
 
-Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
+Modos de producto:
 
-Notas: ______________________________________________________________________
-
-## Del archivo original de Artimex
-
-**Eyebrow:** `Del archivo original de Artimex`
-
-**Titular:**
-
-`Una tradición que`
-
-`sigue creciendo.`
-
-**Texto:** `Estas imágenes pertenecen a la historia visual de Artimex: panes hechos con oficio, color y generosidad desde el origen de la marca.`
-
-**Botón:** `Productos`
-
-**Texto alternativo de las imágenes:**
-
-- `Surtido histórico de pan dulce Artimex`
-- `Empanadas originales Artimex`
+- `Pan fresco` — `B2C`
+- `Mayoreo congelado` — `B2B`
 
 Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
 
 Notas: ______________________________________________________________________
 
-## Artimex para negocios
+## 6. Empleo
 
-**Eyebrow:** `Artimex para negocios`
+**Destino actual:** `#careers`
 
-**Titular:**
+### Metadatos SEO para aprobación
 
-`Tu programa de panadería,`
+**Título meta:** `Empleo en Artimex — Panadería Mexicana Artesanal`
 
-`sin complicaciones.`
+**Descripción meta:** `Únete a Artimex y ayuda a llevar más lejos el auténtico pan mexicano a través del oficio, la calidad y la tradición.`
 
-**Texto:** `Los productos congelados listos para hornear ayudan a restaurantes, supermercados y operadores a ampliar su surtido reduciendo mano de obra, merma y complejidad diaria.`
+**Palabras clave meta:** `empleo Artimex, trabajos de panadería, equipo de panadería mexicana, carreras de panadería artesanal, empleos de producción, Sur de California`
 
-**Cifras mostradas:**
+### Contenido de empleo
 
-- `25M` — `piezas al año`
-- `1M+` — `capacidad semanal`
-- `3` — `líneas especializadas`
-- `6 mo.` — `vida congelada`
+Eyebrow: `Oportunidades en Artimex`
 
-**Beneficios:**
-
-- `Menos presión laboral` — `Ofrece una selección mexicana auténtica sin formar un equipo completo de panadería.`
-- `Producción predecible` — `Productos estandarizados para una cocción, rendimiento y presentación más consistentes.`
-- `Control de merma` — `Hornea según la demanda y conserva un surtido más amplio con menor exposición.`
-
-**Botones:** `Solicitar acceso mayorista` · `Hablar con ventas`
-
-Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
-
-Notas: ______________________________________________________________________
-
-## Del congelador a la vitrina
-
-**Eyebrow:** `Del congelador a la vitrina`
-
-**Titular:**
-
-`Un camino más simple hacia`
-
-`un mejor horneado.`
-
-**Pasos:**
-
-- `Almacena` — `Conserva el surtido principal congelado hasta que la operación lo necesite.`
-- `Prepara` — `Sigue el proceso específico de descongelación, fermentación o preparación.`
-- `Hornea` — `Termina en tu horno para lograr aroma, textura y presencia de vitrina.`
-- `Vende` — `Ofrece auténtico pan mexicano con menos fricción operativa.`
-
-Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
-
-Notas: ______________________________________________________________________
-
-## Oportunidades en Artimex
-
-**Eyebrow:** `Oportunidades en Artimex`
-
-**Titular:**
+Titular:
 
 `Crece con`
 
 `nosotros.`
 
-**Texto:** `¿Te apasiona el oficio, la calidad y trabajar con un equipo que honra la tradición? Nos interesa conocer tu experiencia para futuras oportunidades en Artimex.`
+Texto: `¿Te apasiona el oficio, la calidad y trabajar con un equipo que honra la tradición? Nos interesa conocer tu experiencia para futuras oportunidades en Artimex.`
 
-**Etiqueta de tarjeta:** `Nuevas oportunidades`
+Etiqueta de tarjeta: `Nuevas oportunidades`
 
-**Texto de tarjeta:** `Ayúdanos a llevar el auténtico pan mexicano aún más lejos.`
+Texto de tarjeta: `Ayúdanos a llevar el auténtico pan mexicano aún más lejos.`
 
-**Botón:** `Comparte tu experiencia`
+Botón: `Comparte tu experiencia`
 
-**Asunto del correo:** `Empleo en Artimex`
+Asunto del correo: `Empleo en Artimex`
 
 Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
 
 Notas: ______________________________________________________________________
 
-## Pan fresco • Mayoreo • Foodservice
+## 7. Contacto
 
-**Eyebrow:** `Pan fresco • Mayoreo • Foodservice`
+**Destino actual:** `#contact`
 
-**Titular:**
+### Metadatos SEO para aprobación
+
+**Título meta:** `Contacto Artimex — Pan Fresco, Mayoreo y Foodservice`
+
+**Descripción meta:** `Contacta a Artimex para pedidos retail, programas de mayoreo, distribución y surtidos foodservice.`
+
+**Palabras clave meta:** `contacto Artimex, solicitud de mayoreo, proveedor de pan mexicano, panadería foodservice, panadería Santa Fe Springs, sales@artimex.com`
+
+### Contenido de contacto
+
+Eyebrow: `Pan fresco • Mayoreo • Foodservice`
+
+Titular:
 
 `Lleva Artimex`
 
 `a tu mesa.`
 
-**Texto:** `Para pedidos, programas mayoristas, distribución o un surtido foodservice a la medida, habla con el equipo Artimex.`
+Texto: `Para pedidos, programas mayoristas, distribución o un surtido foodservice a la medida, habla con el equipo Artimex.`
 
-**Etiquetas de contacto:**
+Datos de contacto:
 
 - `Correo de ventas` — `sales@artimex.com`
 - `Llámanos` — `562 777 0924`
 - `Visítanos` — `12764 Florence Avenue` / `Santa Fe Springs, CA 90670`
 
-**Texto del pie:** `Pan mexicano auténtico, hecho con oficio y creado para ser consistente.`
+Texto del pie: `Pan mexicano auténtico, hecho con oficio y creado para ser consistente.`
 
-**Enlaces del pie:** `Inicio` · `Nuestra historia` · `Fresh` · `Frozen` · `Empleo` · `Contacto`
-
-**Copyright:** `© [año actual] Artimex Artisan Mexican Bakery.`
+Enlaces del pie: `Inicio` · `Nuestra historia` · `Fresh` · `Frozen` · `Empleo` · `Contacto`
 
 Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
 

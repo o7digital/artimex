@@ -494,6 +494,8 @@ em { font-weight: 400; color: var(--orange); }
 .principles article > span { color: var(--orange); font-size: 9px; font-weight: 900; letter-spacing: .1em; padding-top: 4px; }
 .principles h3 { margin: 0 0 6px; font-family: var(--serif); font-size: 21px; font-weight: 400; }
 .principles p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.about-source-copy { margin-top: 34px; max-width: 690px; }
+.about-source-copy p { margin: 0 0 18px; color: var(--muted); font-family: var(--serif); font-size: 16px; line-height: 1.58; }
 
 .wholesale {
   min-height: 850px;

@@ -18,7 +18,7 @@ Client notes: ________________________________________________________________
 | # | Navigation item | Current destination |
 | --- | --- | --- |
 | 1 | `Home` | `/` / `#top` |
-| 2 | `Our story` | `#story` |
+| 2 | `About us` | `#about` |
 | 3 | `Fresh / B2C` | `#fresh-products` |
 | 4 | `Frozen / B2B` | `#frozen-products` |
 | 5 | `Products` | `#shop` |
@@ -66,7 +66,7 @@ Link: `Wholesale & foodservice`
 ### Header navigation
 
 - `Home`
-- `Our story`
+- `About us`
 - `Fresh / B2C`
 - `Frozen / B2B`
 - `Products`
@@ -135,21 +135,23 @@ Validation: [ ] Approved as written  [ ] Changes requested
 
 Notes: ______________________________________________________________________
 
-## 2. Our story
+## 2. About us
 
-**Current destination:** `#story`
+**Current destination:** `#about`
+
+**Source page:** https://www.artimexbakery.com/aboutus.html
 
 ### SEO metadata for approval
 
-**Meta title:** `Artimex — Our Story | Artisan Mexican Bakery`
+**Meta title:** `Artimex — About Us | Artisan Mexican Bakery`
 
-**Meta description:** `The Artimex standard: Mexican baking made with authenticity, tradition, superior ingredients and modern consistency.`
+**Meta description:** `Artimex Artisan Mexican Bakery creates authentic Mexican breads in the spirit of the artisan baking tradition.`
 
-**Meta keywords:** `Artimex story, Mexican baking tradition, artisan bakery, authentic Mexican bread, superior ingredients, bakery consistency`
+**Meta keywords:** `Artimex about us, artisan Mexican bakery, authentic recipes, classic Mexican breads, artisan baking tradition, flash frozen bakery`
 
-### The Artimex standard
+### Authenticity. Tradition. Superior Ingredients.
 
-Eyebrow: `The Artimex standard`
+Eyebrow: `Authenticity. Tradition. Superior Ingredients.`
 
 Headline:
 
@@ -157,31 +159,45 @@ Headline:
 
 `Heart.`
 
-Text: `We approach Mexican baking as a craft: the right ingredients, the right fermentation, the right heat — and the discipline to make every batch worthy of the tradition behind it.`
+Text: `When ARTIMEX ARTISAN MEXICAN BAKERY first opened its doors, we had a vision of creating only the finest Mexican breads prepared in the spirit of the artisan baking tradition. In a few short years we have done just that, winning praise and acceptance for our authentic recipes and classic Mexican breads throughout the Hispanic community.`
 
 Principles:
 
-- `Authenticity` — `Classic Mexican breads with recognizable flavor, shape and texture.`
-- `Consistency` — `A repeatable bakery program designed for dependable daily results.`
-- `Superior ingredients` — `Quality starts before the oven — with a better base and careful handling.`
+- `Authenticity` — `Harkening back to the traditions of Mexico’s finest Artisan bakers, we strive to bake not only with our hands and our heads, but with our hearts as well.`
+- `Artisan craft` — `Whether it’s putting together the perfect mix of fresh ingredients, calculating the optimal baking time, or determining peak oven temperatures, we pride ourselves on creating a truly unique bread every time we bake.`
+- `Unrivaled quality` — `What our breads have in common is ARTIMEX ARTISAN MEXICAN BAKERY’S unrivaled quality, always steeped in a rich artisan tradition.`
 
 Image caption:
 
-`Traditional form.`
+`He who works with his hands is a laborer.`
 
-`Modern consistency.`
+`He who works with his hands and his head is a craftsman.`
 
-### From the original Artimex archive
+`He who works with his hands and his head and his heart is an artist.`
 
-Eyebrow: `From the original Artimex archive`
+`—St. Francis of Assisi`
+
+### About us content from the original Artimex page
+
+Eyebrow: `About Us`
 
 Headline:
 
-`A tradition that`
+`Authenticity. Tradition.`
 
-`keeps moving forward.`
+`Superior Ingredients.`
 
-Text: `These images belong to the visual history of Artimex: breads made with craft, color and generosity since the brand’s earliest days.`
+Text: `Bread is a special part of all of our daily lives. It’s what ties our meals together. So whether you’re looking for a light and sweet breakfast bread, or rich and savory Telera for tortas, ARTIMEX ARTISAN MEXICAN BAKERY offers a wide-array of delicious, freshly baked selections for any meal, occasion, or special celebration.`
+
+Text: `Over years of dedication, ARTIMEX ARTISAN MEXICAN BAKERY specialized in Mexican Bakery using the latest in flash frozen bakery technology and has created an impeccable track record of reliability, consistency and dependability. Delicious, artisan-inspired breads prepared with authentic ingredients on a daily basis: this is what sets us apart from the rest.`
+
+Text: `Our authentic baked goods have already garnered strong sales and wide acceptance throughout the Hispanic community. We see as validation of our product line the success we have seen in sales, but more importantly, the acceptance that we receive on a daily basis by customers of the leading Mexican restaurant/bakery chain in Southern California, EL GALLO GIRO.`
+
+Text: `ARTIMEX ARTISAN MEXICAN BAKERY is the perfect solution to be your own Mexican bakery, because we help you to simplify your operations, lower your labor costs, and control your operational costs. In addition, through our high quality standards and exceptional flavor profiles, we can help you sell more!`
+
+Text: `This includes such important needs as hiring qualified bakers, creating consistent products, stocking an ample variety of baked goods that is attractive to customers, and having enough inventory to supply your demand. We help solve waste issues, the issue of investing too much money and time acquiring and then maintaining heavy equipment, and many other critical problems.`
+
+Text: `El Gallo Giro is a household name in Los Angeles and surrounding cities, and serves over 1,000,000 meals a year in 11 restaurants. El Gallo Giro has been a mainstay for 21 years due to its adherence to the traditional preparation techniques and original recipes. We are proud of our relationship with El Gallo Giro, and continue to provide only the freshest, best tasting bakery products for El Gallo Giro and many other restaurants and markets.`
 
 Button: `Products`
 
@@ -421,7 +437,7 @@ Contact details:
 
 Footer statement: `Authentic Mexican bread, made with craft and built for consistency.`
 
-Footer links: `Home` · `Our story` · `Fresh` · `Frozen` · `Careers` · `Contact`
+Footer links: `Home` · `About us` · `Fresh` · `Frozen` · `Careers` · `Contact`
 
 Validation: [ ] Approved as written  [ ] Changes requested
 
@@ -466,7 +482,7 @@ Enlace: `Mayoreo y foodservice`
 ### Navegación
 
 - `Inicio`
-- `Nuestra historia`
+- `Sobre nosotros`
 - `Fresco / B2C`
 - `Congelado / B2B`
 - `Productos`
@@ -535,21 +551,23 @@ Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
 
 Notas: ______________________________________________________________________
 
-## 2. Nuestra historia
+## 2. Sobre nosotros
 
-**Destino actual:** `#story`
+**Destino actual:** `#about`
+
+**Página de origen:** https://www.artimexbakery.com/aboutus.html
 
 ### Metadatos SEO para aprobación
 
-**Título meta:** `Artimex — Nuestra historia | Panadería Mexicana Artesanal`
+**Título meta:** `Artimex — Sobre nosotros | Panadería Mexicana Artesanal`
 
-**Descripción meta:** `El estándar Artimex: pan mexicano hecho con autenticidad, tradición, ingredientes superiores y consistencia moderna.`
+**Descripción meta:** `Artimex Artisan Mexican Bakery crea panes mexicanos auténticos con el espíritu de la tradición de la panadería artesanal.`
 
-**Palabras clave meta:** `historia de Artimex, tradición del pan mexicano, panadería artesanal, pan mexicano auténtico, ingredientes superiores, consistencia`
+**Palabras clave meta:** `sobre Artimex, panadería mexicana artesanal, recetas auténticas, panes mexicanos clásicos, tradición de panadería artesanal, panificación ultracongelada`
 
-### El estándar Artimex
+### Autenticidad. Tradición. Ingredientes superiores.
 
-Eyebrow: `El estándar Artimex`
+Eyebrow: `Autenticidad. Tradición. Ingredientes superiores.`
 
 Titular:
 
@@ -557,31 +575,45 @@ Titular:
 
 `Corazón.`
 
-Texto: `Hacemos pan mexicano como un oficio: ingredientes correctos, fermentación precisa, calor exacto y la disciplina para que cada lote honre la tradición.`
+Texto: `Cuando ARTIMEX ARTISAN MEXICAN BAKERY abrió sus puertas, teníamos la visión de crear únicamente los mejores panes mexicanos preparados con el espíritu de la tradición de la panadería artesanal. En pocos años lo hemos logrado, ganando elogios y aceptación por nuestras recetas auténticas y panes mexicanos clásicos en toda la comunidad hispana.`
 
 Principios:
 
-- `Autenticidad` — `Panes mexicanos clásicos con sabor, forma y textura reconocibles.`
-- `Consistencia` — `Un programa repetible diseñado para resultados confiables cada día.`
-- `Ingredientes superiores` — `La calidad comienza antes del horno, con una mejor base y un manejo cuidadoso.`
+- `Autenticidad` — `Recordando las tradiciones de los mejores panaderos artesanales de México, nos esforzamos por hornear no solo con nuestras manos y nuestra mente, sino también con el corazón.`
+- `Oficio artesanal` — `Desde la mezcla perfecta de ingredientes frescos hasta calcular el tiempo óptimo de horneado y determinar la temperatura ideal del horno, nos enorgullece crear un pan verdaderamente único cada vez.`
+- `Calidad incomparable` — `Nuestros panes comparten una calidad incomparable, siempre arraigada en una rica tradición artesanal.`
 
 Texto de imagen:
 
-`Forma tradicional.`
+`Quien trabaja con sus manos es un trabajador.`
 
-`Consistencia moderna.`
+`Quien trabaja con sus manos y su mente es un artesano.`
 
-### Del archivo original de Artimex
+`Quien trabaja con sus manos, su mente y su corazón es un artista.`
 
-Eyebrow: `Del archivo original de Artimex`
+`—San Francisco de Asís.`
+
+### Contenido de Sobre nosotros de la página original de Artimex
+
+Eyebrow: `Sobre nosotros`
 
 Titular:
 
-`Una tradición que`
+`Autenticidad. Tradición.`
 
-`sigue creciendo.`
+`Ingredientes superiores.`
 
-Texto: `Estas imágenes pertenecen a la historia visual de Artimex: panes hechos con oficio, color y generosidad desde el origen de la marca.`
+Texto: `El pan es una parte especial de nuestra vida diaria. Es lo que une nuestras comidas. Ya sea que busques un pan dulce y ligero para el desayuno o una Telera rica y sabrosa para tortas, ARTIMEX ARTISAN MEXICAN BAKERY ofrece una amplia variedad de selecciones deliciosas y recién horneadas para cualquier comida, ocasión o celebración especial.`
+
+Texto: `A lo largo de años de dedicación, ARTIMEX ARTISAN MEXICAN BAKERY se ha especializado en panadería mexicana utilizando la tecnología más avanzada de panificación ultracongelada y ha creado un historial impecable de confiabilidad, consistencia y seguridad. Panes deliciosos, inspirados en la artesanía y preparados diariamente con ingredientes auténticos: eso es lo que nos distingue.`
+
+Texto: `Nuestros productos horneados auténticos ya han obtenido fuertes ventas y una amplia aceptación en la comunidad hispana. Consideramos una validación de nuestra línea de productos el éxito que hemos visto en ventas, pero más importante aún, la aceptación que recibimos diariamente de los clientes de la principal cadena de restaurantes y panaderías mexicanas del sur de California, EL GALLO GIRO.`
+
+Texto: `ARTIMEX ARTISAN MEXICAN BAKERY es la solución perfecta para tener tu propia panadería mexicana, porque te ayudamos a simplificar tus operaciones, reducir los costos de mano de obra y controlar tus costos operativos. Además, mediante nuestros altos estándares de calidad y perfiles de sabor excepcionales, podemos ayudarte a vender más.`
+
+Texto: `Esto incluye necesidades importantes como contratar panaderos calificados, crear productos consistentes, mantener una amplia variedad de productos horneados atractiva para los clientes y tener suficiente inventario para satisfacer la demanda. Ayudamos a resolver los problemas de merma y la inversión excesiva de tiempo y dinero en adquirir y mantener equipos pesados, además de muchos otros problemas críticos.`
+
+Texto: `EL GALLO GIRO es un nombre familiar en Los Ángeles y las ciudades cercanas, y sirve más de 1,000,000 de comidas al año en 11 restaurantes. El Gallo Giro ha sido un pilar durante 21 años gracias a su adhesión a las técnicas tradicionales de preparación y recetas originales. Estamos orgullosos de nuestra relación con El Gallo Giro y continuamos proporcionando los productos de panadería más frescos y sabrosos para El Gallo Giro y muchos otros restaurantes y mercados.`
 
 Botón: `Productos`
 
@@ -819,7 +851,7 @@ Datos de contacto:
 
 Texto del pie: `Pan mexicano auténtico, hecho con oficio y creado para ser consistente.`
 
-Enlaces del pie: `Inicio` · `Nuestra historia` · `Fresh` · `Frozen` · `Empleo` · `Contacto`
+Enlaces del pie: `Inicio` · `Sobre nosotros` · `Fresh` · `Frozen` · `Empleo` · `Contacto`
 
 Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
 

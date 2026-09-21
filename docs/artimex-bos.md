@@ -21,7 +21,7 @@ Client notes: ________________________________________________________________
 
 **Meta description:** `Artimex Artisan Mexican Bakery — authentic Mexican breads, fresh for retail and frozen ready-to-bake for wholesale.`
 
-## 1. Announcement and navigation
+## Announcement bar and header
 
 **Announcement:** `Authentic Mexican bakery • Southern California`
 
@@ -50,7 +50,7 @@ Validation: [ ] Approved as written  [ ] Changes requested
 
 Notes: ______________________________________________________________________
 
-## 2. Hero
+## Authenticity • Tradition • Superior ingredients
 
 **Eyebrow:** `Authenticity • Tradition • Superior ingredients`
 
@@ -88,7 +88,7 @@ Validation: [ ] Approved as written  [ ] Changes requested
 
 Notes: ______________________________________________________________________
 
-## 3. Product category marquee
+## Product categories
 
 `CONCHAS` · `EMPANADAS` · `BOLILLOS` · `CAMPECHANAS` · `PAN FINO` · `POLVORONES` · `TELERAS` · `OREJAS` · `FOODSERVICE`
 
@@ -96,9 +96,7 @@ Validation: [ ] Approved as written  [ ] Changes requested
 
 Notes: ______________________________________________________________________
 
-## 4. Customer journeys
-
-### Fresh from our ovens
+## Fresh from our ovens
 
 **Audience label:** `For home & family`
 
@@ -112,7 +110,7 @@ Notes: ______________________________________________________________________
 
 **Button:** `Shop fresh`
 
-### Your bakery, made simpler
+## Your bakery, made simpler
 
 **Audience label:** `For retail & foodservice`
 
@@ -130,7 +128,7 @@ Validation: [ ] Approved as written  [ ] Changes requested
 
 Notes: ______________________________________________________________________
 
-## 5. Product experience introduction
+## Two ways to enjoy Artimex
 
 **Eyebrow:** `Two ways to enjoy Artimex`
 
@@ -146,7 +144,7 @@ Validation: [ ] Approved as written  [ ] Changes requested
 
 Notes: ______________________________________________________________________
 
-## 6. Fresh bakery / B2C catalogue
+## The Artimex collection
 
 **Tab label:** `Fresh bakery`
 
@@ -184,7 +182,7 @@ Validation: [ ] Approved as written  [ ] Changes requested
 
 Notes: ______________________________________________________________________
 
-## 7. Frozen wholesale / B2B programme
+## Artimex bake-off program
 
 **Tab label:** `Frozen wholesale`
 
@@ -237,7 +235,7 @@ Validation: [ ] Approved as written  [ ] Changes requested
 
 Notes: ______________________________________________________________________
 
-## 8. The Artimex standard
+## The Artimex standard
 
 **Eyebrow:** `The Artimex standard`
 
@@ -267,7 +265,7 @@ Validation: [ ] Approved as written  [ ] Changes requested
 
 Notes: ______________________________________________________________________
 
-## 9. Artimex heritage
+## From the original Artimex archive
 
 **Eyebrow:** `From the original Artimex archive`
 
@@ -290,7 +288,7 @@ Validation: [ ] Approved as written  [ ] Changes requested
 
 Notes: ______________________________________________________________________
 
-## 10. Artimex for business
+## Artimex for business
 
 **Eyebrow:** `Artimex for business`
 
@@ -321,7 +319,7 @@ Validation: [ ] Approved as written  [ ] Changes requested
 
 Notes: ______________________________________________________________________
 
-## 11. From freezer to bakery case
+## From freezer to bakery case
 
 **Eyebrow:** `From freezer to bakery case`
 
@@ -342,7 +340,7 @@ Validation: [ ] Approved as written  [ ] Changes requested
 
 Notes: ______________________________________________________________________
 
-## 12. Careers
+## Opportunities at Artimex
 
 **Eyebrow:** `Opportunities at Artimex`
 
@@ -366,7 +364,7 @@ Validation: [ ] Approved as written  [ ] Changes requested
 
 Notes: ______________________________________________________________________
 
-## 13. Contact and footer
+## Fresh bakery • Wholesale • Foodservice
 
 **Eyebrow:** `Fresh bakery • Wholesale • Foodservice`
 
@@ -404,7 +402,7 @@ Notes: ______________________________________________________________________
 
 **Descripción meta:** `Artimex Artisan Mexican Bakery — auténtico pan mexicano fresco para consumidores y congelado listo para hornear para mayoreo.`
 
-## 1. Anuncio y navegación
+## Barra de anuncio y encabezado
 
 **Anuncio:** `Panadería mexicana auténtica • Sur de California`
 
@@ -433,7 +431,7 @@ Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
 
 Notas: ______________________________________________________________________
 
-## 2. Hero
+## Autenticidad • Tradición • Ingredientes superiores
 
 **Eyebrow:** `Autenticidad • Tradición • Ingredientes superiores`
 
@@ -471,7 +469,7 @@ Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
 
 Notas: ______________________________________________________________________
 
-## 3. Marquee de categorías
+## Categorías de productos
 
 `CONCHAS` · `EMPANADAS` · `BOLILLOS` · `CAMPECHANAS` · `PAN FINO` · `POLVORONES` · `TELERAS` · `OREJAS` · `FOODSERVICE`
 
@@ -479,9 +477,7 @@ Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
 
 Notas: ______________________________________________________________________
 
-## 4. Recorridos de clientes
-
-### Fresco desde nuestros hornos
+## Fresco desde nuestros hornos
 
 **Etiqueta de audiencia:** `Para casa y familia`
 
@@ -495,7 +491,7 @@ Notas: ______________________________________________________________________
 
 **Botón:** `Comprar fresco`
 
-### Tu panadería, más simple
+## Tu panadería, más simple
 
 **Etiqueta de audiencia:** `Para retail y foodservice`
 
@@ -513,7 +509,7 @@ Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
 
 Notas: ______________________________________________________________________
 
-## 5. Introducción de la experiencia de productos
+## Dos formas de disfrutar Artimex
 
 **Eyebrow:** `Dos formas de disfrutar Artimex`
 
@@ -529,7 +525,7 @@ Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
 
 Notas: ______________________________________________________________________
 
-## 6. Catálogo de pan fresco / B2C
+## La colección Artimex
 
 **Etiqueta de pestaña:** `Pan fresco`
 
@@ -567,7 +563,7 @@ Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
 
 Notas: ______________________________________________________________________
 
-## 7. Programa de mayoreo congelado / B2B
+## Programa Artimex Bake-Off
 
 **Etiqueta de pestaña:** `Mayoreo congelado`
 
@@ -620,7 +616,7 @@ Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
 
 Notas: ______________________________________________________________________
 
-## 8. El estándar Artimex
+## El estándar Artimex
 
 **Eyebrow:** `El estándar Artimex`
 
@@ -650,7 +646,7 @@ Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
 
 Notas: ______________________________________________________________________
 
-## 9. Herencia Artimex
+## Del archivo original de Artimex
 
 **Eyebrow:** `Del archivo original de Artimex`
 
@@ -673,7 +669,7 @@ Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
 
 Notas: ______________________________________________________________________
 
-## 10. Artimex para negocios
+## Artimex para negocios
 
 **Eyebrow:** `Artimex para negocios`
 
@@ -704,7 +700,7 @@ Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
 
 Notas: ______________________________________________________________________
 
-## 11. Del congelador a la vitrina
+## Del congelador a la vitrina
 
 **Eyebrow:** `Del congelador a la vitrina`
 
@@ -725,7 +721,7 @@ Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
 
 Notas: ______________________________________________________________________
 
-## 12. Empleo
+## Oportunidades en Artimex
 
 **Eyebrow:** `Oportunidades en Artimex`
 
@@ -749,7 +745,7 @@ Validación: [ ] Aprobado tal como está  [ ] Solicita cambios
 
 Notas: ______________________________________________________________________
 
-## 13. Contacto y pie de página
+## Pan fresco • Mayoreo • Foodservice
 
 **Eyebrow:** `Pan fresco • Mayoreo • Foodservice`
 

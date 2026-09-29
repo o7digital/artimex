@@ -811,19 +811,29 @@ em { font-weight: 400; color: var(--orange); }
 }
 
 /* Product presentation based on the approved Fresh / Frozen references. */
+.shop-catalog-toolbar { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: center; gap: 5vw; }
+.catalog-intro { max-width: 490px; margin: 15px 0 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.catalog-availability { margin: 14px 0 0; color: var(--muted); font-size: 10px; line-height: 1.7; }
+.catalog-availability a { color: var(--orange-deep); text-decoration: underline; text-underline-offset: 3px; }
+.catalog-count { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 20px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.catalog-count span { color: var(--orange-deep); }
 .editorial-products { gap: 22px; }
-.editorial-products .product-card { border: 1px solid #e2d9c9; }
+.editorial-products .product-card { display: flex; flex-direction: column; border: 1px solid #e2d9c9; }
 .editorial-products .product-image-wrap { aspect-ratio: 1.2; padding: 28px; background: #f0ead9; }
-.editorial-products .product-image-wrap img { object-fit: contain; transform: none; filter: none; }
+.editorial-products .product-image-wrap img,
+.editorial-products .product-card:hover .product-image-wrap img { object-fit: contain; transform: none; filter: none; }
 .editorial-products .product-image-wrap::after { display: none; }
 .editorial-products .product-image-wrap .product-number { inset: 17px auto auto 18px; padding: 0; background: transparent; color: var(--ink); border-radius: 0; font-size: 9px; }
-.editorial-products .product-image-wrap i { position: absolute; z-index: 2; right: 14px; bottom: 14px; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; background: #821426; color: white; font-style: normal; font-size: 17px; }
-.editorial-products .product-copy { padding: 0; }
-.editorial-products .product-title-row { min-height: 112px; padding: 22px; display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; }
-.editorial-products .product-title-row h4 { font-size: 25px; }
+.editorial-products .product-copy { display: flex; flex: 1; flex-direction: column; padding: 0; }
+.editorial-products .product-title-row { flex: 1; min-height: 152px; padding: 22px; }
+.editorial-products .product-title-row h4 { font-size: 25px; line-height: 1.12; text-wrap: pretty; }
 .editorial-products .product-title-row p { min-height: 0; margin: 8px 0 0; color: var(--muted); font-size: 10px; }
-.editorial-products .product-title-row small { max-width: 90px; color: #7c6c60; text-align: right; font-size: 8px; line-height: 1.4; letter-spacing: .1em; text-transform: uppercase; }
+.editorial-products .product-title-row .product-category { margin: 0 0 10px !important; }
 .editorial-products .product-copy > button { padding: 14px 20px; border-top: 1px solid #ded4c3; }
+.editorial-products .catalog-image-wrap { display: grid; place-items: center; }
+.catalog-product-crop { position: relative; width: min(100%, 215px); overflow: hidden; clip-path: ellipse(50% 50% at 50% 50%); mix-blend-mode: multiply; }
+.editorial-products .catalog-product-crop img { position: absolute; max-width: none; height: auto; object-fit: initial; transition: none; }
+.editorial-products .product-image-wrap .catalog-image-caption { inset: auto 12px 14px; padding: 0; background: transparent; border-radius: 0; color: var(--muted); text-align: center; font-size: 7px; font-weight: 500; letter-spacing: .06em; }
 
 .frozen-program { display: grid; grid-template-columns: .9fr 1.1fr; min-height: 600px; background: #eee4d3; }
 .frozen-intro { padding: 70px 5vw; background: #811428; color: var(--cream); }
@@ -844,6 +854,8 @@ em { font-weight: 400; color: var(--orange); }
 .frozen-list b { font-family: var(--serif); font-size: 27px; font-weight: 400; }
 
 @media (max-width: 900px) {
+  .shop-catalog-toolbar { grid-template-columns: 1fr; gap: 24px; }
+  .shop-catalog-toolbar .category-list { justify-content: flex-start; }
   .frozen-program { grid-template-columns: 1fr; }
   .frozen-list { padding: 20px 24px 35px; }
 }

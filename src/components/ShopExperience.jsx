@@ -1,29 +1,21 @@
 import { useEffect, useMemo, useState } from 'react';
-import { freshProducts, wholesaleProducts } from '../data/products.js';
+import { freshProducts, productFamilies, wholesaleProducts } from '../data/products.js';
 
 const spanishProducts = {
-  conchas: ['Conchas', 'Vainilla · Chocolate · Rosa · Amarilla', 'Surtido fresco'],
-  bolillo: ['Bolillos', 'Corteza crujiente · Centro suave y ligero', '12 piezas'],
-  telera: ['Teleras', 'El auténtico pan para tortas', '12 piezas'],
-  empanada: ['Empanadas', 'Masa dorada con relleno de piña', 'Para la vitrina'],
-  'concha-rosa': ['Concha Rosa', 'Masa suave · Cubierta rosa', 'Favorita del público'],
-  'concha-cacao': ['Concha de Chocolate', 'Masa suave · Cubierta de cacao', 'Receta tradicional'],
   'conchas-assorted-case': ['Conchas Surtidas', 'Masa congelada'],
   'bolillos-wholesale-case': ['Bolillos y Teleras', 'Congelados / completamente horneados'],
   'assorted-mexican-breads': ['Surtido de Pan Mexicano', 'Empacado individualmente'],
   'empanadas-foodservice-case': ['Empanadas', 'Congeladas / completamente horneadas']
 };
 
-const initialMode = () => typeof window !== 'undefined' && window.location.hash === '#frozen-products' ? 'wholesale' : 'fresh';
-
 export default function ShopExperience({ lang = 'en' }) {
   const es = lang === 'es';
-  const [mode, setMode] = useState(initialMode);
+  const [mode, setMode] = useState('fresh');
   const [category, setCategory] = useState('All');
   const [selection, setSelection] = useState({});
   const [isSummaryOpen, setIsSummaryOpen] = useState(false);
   const source = mode === 'fresh' ? freshProducts : wholesaleProducts;
-  const categories = ['All', ...new Set(freshProducts.map((product) => product.category))];
+  const categories = ['All', ...productFamilies.map((family) => family.id)];
   const visibleProducts = useMemo(() => category === 'All' ? freshProducts : freshProducts.filter((product) => product.category === category), [category]);
   const selectedProducts = source.filter((product) => selection[product.id]);
   const itemCount = selectedProducts.reduce((total, product) => total + selection[product.id], 0);
@@ -34,7 +26,21 @@ export default function ShopExperience({ lang = 'en' }) {
     fresh: 'Fresh bakery', frozen: 'Frozen wholesale', freshEye: 'The Artimex collection', freshTitle: 'Find your favorite.', frozenEye: 'Artimex bake-off program', frozenTitle: 'Authentic variety. Operational control.', frozenBody: 'Stock a complete Mexican bakery without adding specialized bakers, heavy equipment or daily production risk.', filters: 'Product filters', all: 'All', add: 'Add to basket', addCase: 'Add to inquiry', basket: 'Basket', inquiry: 'Wholesale inquiry', review: 'Review', close: 'Close selection', selection: 'Demonstration selection', request: 'Request full catalog', case: 'Case', pallet: 'Pallet', units: 'units', shelf: 'Up to 6-month frozen shelf life', formats: 'Consistent case and pallet formats', custom: 'Custom retail programs available', send: 'Send wholesale inquiry', demo: 'Demo basket — checkout and live pricing will connect to the future backend.'
   };
 
-  const productText = (product, index = 0) => es && spanishProducts[product.id] ? spanishProducts[product.id][index] : [product.name, product.note, product.tag][index];
+  const freshCopy = es ? {
+    intro: 'De las conchas al hojaldre: descubre los sabores, colores y formas de nuestra panadería mexicana. Elige una familia y encuentra tu favorito.',
+    availability: 'La selección puede variar.', contact: 'Consulta disponibilidad con la panadería', products: 'productos'
+  } : {
+    intro: 'From conchas to puff pastries, discover the flavors, colors and shapes of our Mexican bakery. Choose a family and find your favorite.',
+    availability: 'Selection may vary.', contact: 'Ask the bakery about availability', products: 'products'
+  };
+  const productText = (product, index = 0) => {
+    if (es && product.nameEs) return [product.nameEs, product.noteEs, product.tagEs][index];
+    return es && spanishProducts[product.id] ? spanishProducts[product.id][index] : [product.name, product.note, product.tag][index];
+  };
+  const familyText = (id) => {
+    const family = productFamilies.find((item) => item.id === id);
+    return family ? family[lang] : id;
+  };
   const switchMode = (nextMode) => { setMode(nextMode); setCategory('All'); setSelection({}); setIsSummaryOpen(false); };
   const addProduct = (id) => setSelection((current) => ({ ...current, [id]: (current[id] || 0) + 1 }));
   const removeProduct = (id) => setSelection((current) => { const next = { ...current }; if (next[id] > 1) next[id] -= 1; else delete next[id]; return next; });
@@ -54,10 +60,20 @@ export default function ShopExperience({ lang = 'en' }) {
     </div>
 
     {mode === 'fresh' ? <>
-      <div className="shop-toolbar"><div><p className="eyebrow">{copy.freshEye}</p><h3>{copy.freshTitle}</h3></div><div className="category-list" aria-label={copy.filters}>{categories.map((item) => <button key={item} type="button" className={category === item ? 'active' : ''} aria-pressed={category === item} onClick={() => setCategory(item)}>{item === 'All' ? copy.all : item}</button>)}</div></div>
+      <div className="shop-toolbar shop-catalog-toolbar">
+        <div><p className="eyebrow">{copy.freshEye}</p><h3>{copy.freshTitle}</h3><p className="catalog-intro">{freshCopy.intro}</p><p className="catalog-availability">{freshCopy.availability} <a href="#contact">{freshCopy.contact} <span aria-hidden="true">↗</span></a></p></div>
+        <div className="category-list" aria-label={copy.filters}>{categories.map((item) => <button key={item} type="button" className={category === item ? 'active' : ''} aria-pressed={category === item} onClick={() => setCategory(item)}>{item === 'All' ? copy.all : familyText(item)}</button>)}</div>
+      </div>
+      <p className="catalog-count" aria-live="polite">{visibleProducts.length} {freshCopy.products} <span aria-hidden="true">/</span> {category === 'All' ? copy.freshEye : familyText(category)}</p>
       <div className="product-grid editorial-products">{visibleProducts.map((product) => <article className="product-card" key={product.id}>
-        <div className="product-image-wrap"><span className="product-number">0{freshProducts.indexOf(product) + 1}</span><img src={product.image} alt={`${productText(product)} — Artimex Bakery`} width={product.imageWidth} height={product.imageHeight} loading="lazy" decoding="async"/><i aria-hidden="true">↘</i></div>
-        <div className="product-copy"><div className="product-title-row"><div><h4>{productText(product)}</h4><p>{productText(product, 1)}</p></div><small>{productText(product, 2)}</small></div><button type="button" onClick={() => addProduct(product.id)}>{copy.add}<span aria-hidden="true">+</span></button></div>
+        <div className={`product-image-wrap${product.catalogCrop ? ' catalog-image-wrap' : ''}`}>
+          <span className="product-number">{String(freshProducts.indexOf(product) + 1).padStart(2, '0')}</span>
+          {product.catalogCrop ? <div className="catalog-product-crop" style={{ aspectRatio: `${product.catalogCrop.width} / ${product.catalogCrop.height}` }}>
+            <img src={product.image} alt={`${product.imageCaption ? (es ? product.imageCaptionEs : product.imageCaption) : productText(product)} — Artimex Bakery`} width={product.imageWidth} height={product.imageHeight} loading="lazy" decoding="async" style={{ width: `${product.imageWidth / product.catalogCrop.width * 100}%`, left: `${-product.catalogCrop.x / product.catalogCrop.width * 100}%`, top: `${-product.catalogCrop.y / product.catalogCrop.height * 100}%` }}/>
+          </div> : <img src={product.image} alt={`${productText(product)} — Artimex Bakery`} width={product.imageWidth} height={product.imageHeight} loading="lazy" decoding="async"/>}
+          {product.imageCaption && <span className="catalog-image-caption">{es ? product.imageCaptionEs : product.imageCaption}</span>}
+        </div>
+        <div className="product-copy"><div className="product-title-row"><div><p className="product-category">{familyText(product.category)}</p><h4>{productText(product)}</h4><p>{productText(product, 1)}</p></div></div><button type="button" onClick={() => addProduct(product.id)} aria-label={`${copy.add}: ${productText(product)}`}>{copy.add}<span aria-hidden="true">+</span></button></div>
       </article>)}</div>
     </> : <div className="frozen-program">
       <div className="frozen-intro"><p className="eyebrow light">{copy.frozenEye}</p><h3>{copy.frozenTitle}</h3><p>{copy.frozenBody}</p><ul><li>{copy.shelf}</li><li>{copy.formats}</li><li>{copy.custom}</li></ul><a className="button button-cream" href="mailto:sales@artimex.com?subject=Artimex%20full%20catalog">{copy.request}<span>→</span></a></div>

@@ -24,10 +24,7 @@ const wholesale = productSections.find(section => section.key === 'wholesale');
       <ul class="about-principles" role="list">{c.principles.map(principle => <li>{principle}</li>)}</ul>
     </div>
     <figure class="about-portrait">
-      <picture>
-        <source srcset="/images/original/artimex-bread-assortment.webp" type="image/webp" />
-        <img src="/images/original/artimex-bread-assortment.jpg" alt={c.portraitAlt} width="800" height="868" loading="lazy" decoding="async" />
-      </picture>
+      <div class="about-photo-slot" aria-hidden="true"></div>
       <figcaption>{c.portraitCaption}</figcaption>
     </figure>
   </div>
@@ -36,21 +33,9 @@ const wholesale = productSections.find(section => section.key === 'wholesale');
     <div class="about-standard-intro">
       <p class="eyebrow">{c.craftEyebrow}</p>
       <h3>{c.craftTitle}</h3>
-      <div class="about-archive">
-        <figure>
-          <picture>
-            <source srcset="/images/original/artimex-conchas-portrait.webp" type="image/webp" />
-            <img src="/images/original/artimex-conchas-portrait.jpg" alt={c.conchasAlt} width="300" height="329" loading="lazy" decoding="async" />
-          </picture>
-          <figcaption>Conchas</figcaption>
-        </figure>
-        <figure>
-          <picture>
-            <source srcset="/images/original/artimex-empanadas.webp" type="image/webp" />
-            <img src="/images/original/artimex-empanadas.jpg" alt={c.empanadasAlt} width="300" height="329" loading="lazy" decoding="async" />
-          </picture>
-          <figcaption>Empanadas</figcaption>
-        </figure>
+      <div class="about-archive" aria-hidden="true">
+        <div class="about-photo-slot"></div>
+        <div class="about-photo-slot"></div>
       </div>
     </div>
     <ol class="about-craft-list">
@@ -95,17 +80,13 @@ const wholesale = productSections.find(section => section.key === 'wholesale');
   .about-principles li { display: flex; align-items: center; gap: 9px; color: var(--orange-deep); font-size: 10px; font-weight: 800; }
   .about-principles li::before { content: ''; width: 5px; height: 5px; background: currentColor; transform: rotate(45deg); }
   .about-portrait { min-width: 0; min-height: 700px; margin: 0; padding: clamp(32px, 4vw, 72px); grid-column: 1; grid-row: 1; display: grid; grid-template-rows: 1fr auto; gap: 24px; background: #811428; }
-  .about-portrait picture { min-height: 0; position: relative; display: block; overflow: hidden; }
-  .about-portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
+  .about-portrait .about-photo-slot { min-height: 0; background: rgba(244,236,220,.08); }
   .about-portrait figcaption { max-width: 390px; padding-left: 20px; border-left: 1px solid #dda547; color: var(--cream); font-family: var(--serif); font-size: clamp(21px, 1.8vw, 29px); font-style: italic; line-height: 1.25; text-wrap: balance; }
   .about-standard { padding: clamp(72px, 7vw, 116px) 6vw; display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 8vw; background: var(--paper); }
   .about-standard h3 { max-width: 550px; font-size: clamp(42px, 4.2vw, 68px); letter-spacing: -.045em; line-height: 1.05; text-wrap: balance; }
   .about-archive { max-width: 530px; margin-top: 40px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-  .about-archive figure { min-width: 0; margin: 0; }
-  .about-archive figure:last-child { margin-top: 34px; }
-  .about-archive picture { display: block; aspect-ratio: 300 / 329; overflow: hidden; background: var(--cream-2); }
-  .about-archive img { width: 100%; height: 100%; object-fit: cover; }
-  .about-archive figcaption { margin-top: 12px; color: #655448; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+  .about-archive .about-photo-slot { min-width: 0; aspect-ratio: 300 / 329; background: var(--cream-2); }
+  .about-archive .about-photo-slot:last-child { margin-top: 34px; }
   .about-craft-list { margin: 0; padding: 0; list-style: none; align-self: center; border-top: 1px solid var(--line); }
   .about-craft-list li { padding: 30px 0; display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 22px; border-bottom: 1px solid var(--line); }
   .about-craft-list li > span { padding-top: 7px; color: var(--orange-deep); font-size: 10px; font-weight: 800; }
@@ -144,7 +125,7 @@ const wholesale = productSections.find(section => section.key === 'wholesale');
     .about-opening { grid-column: auto; padding: 76px 7vw; }
     h2 { max-width: 650px; font-size: clamp(54px, 7.8vw, 76px); }
     .about-portrait { min-height: 0; grid-column: auto; grid-row: auto; padding: 40px 7vw; }
-    .about-portrait picture { aspect-ratio: 4 / 3; }
+    .about-portrait .about-photo-slot { aspect-ratio: 4 / 3; }
     .about-standard { grid-template-columns: minmax(0, 1fr); gap: 50px; padding-right: 7vw; padding-left: 7vw; }
     .about-standard-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 30px; align-content: start; }
     .about-standard-intro .eyebrow { grid-column: 1; }
@@ -162,13 +143,13 @@ const wholesale = productSections.find(section => section.key === 'wholesale');
     .about-lead { font-size: 15px; }
     .about-principles { column-gap: 17px; }
     .about-portrait { padding: 24px; }
-    .about-portrait picture { aspect-ratio: 4 / 5; }
+    .about-portrait .about-photo-slot { aspect-ratio: 4 / 5; }
     .about-portrait figcaption { font-size: 23px; }
     .about-standard { padding: 64px 22px; gap: 40px; }
     .about-standard-intro { display: block; }
     .about-standard h3 { font-size: clamp(40px, 10.5vw, 56px); }
     .about-archive { margin-top: 30px; gap: 14px; }
-    .about-archive figure:last-child { margin-top: 24px; }
+    .about-archive .about-photo-slot:last-child { margin-top: 24px; }
     .about-craft-list li { grid-template-columns: 23px minmax(0, 1fr); gap: 13px; }
     .about-craft-list h4 { font-size: 26px; }
     .about-craft-list p { font-size: 14px; }

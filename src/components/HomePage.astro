@@ -48,7 +48,7 @@ const nav = [[c.home, '#top'], [c.story, '#about'], [c.fresh, '#fresh-products']
 <div class="site-shell" id="top">
   <div class="announcement"><span>{c.announcement}</span><a href="#wholesale">{c.wholesale} <span>↗</span></a></div>
   <header class="header" data-header>
-    <a class="brand" href={localePath} aria-label="Artimex home"><BrandLogo /></a>
+    <a class="brand header-brand" href={localePath} aria-label="Artimex home"><BrandLogo /></a>
     <nav class="nav" aria-label="Main navigation">{nav.map(([label, href]) => <a href={href}>{label}</a>)}</nav>
     <div class="header-actions"><a class="language-link" href={otherPath} hreflang={es ? 'en' : 'es'}>{c.language}</a><a class="header-cta" href="#shop">{c.shop} <span>↗</span></a></div>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label={c.menu}>

@@ -1,11 +1,13 @@
 ---
 import BrandLogo from './BrandLogo.astro';
+import { getProductSections } from '../data/productSections.js';
 
 interface Props { lang: 'en' | 'es'; }
 const { lang } = Astro.props;
 const es = lang === 'es';
 const home = es ? '/es/' : '/';
 const privacy = es ? '/es/aviso-de-privacidad/' : '/privacy-notice/';
+const productSections = getProductSections();
 const copy = es ? {
   intro: 'Pan mexicano auténtico, hecho con oficio y creado para ser consistente.',
   explore: 'Descubre Artimex', contact: 'Hablemos', department: 'Departamento de Ventas de Artimex Bakery',
@@ -21,7 +23,7 @@ const copy = es ? {
 <footer class="site-footer">
   <div class="footer-main">
     <div class="footer-identity"><a class="brand" href={home}><BrandLogo compact /></a><p>{copy.intro}</p><span>Artimex Artisan Mexican Bakery</span></div>
-    <nav class="footer-explore" aria-label={copy.explore}><h2>{copy.explore}</h2><a href={home}>{copy.home}</a><a href={`${home}#about`}>{copy.about}</a><a href={`${home}#fresh-products`}>{copy.fresh}</a><a href={`${home}#frozen-products`}>{copy.frozen}</a><a href={`${home}#careers`}>{copy.careers}</a></nav>
+    <nav class="footer-explore" aria-label={copy.explore}><h2>{copy.explore}</h2><a href={home}>{copy.home}</a><a href={`${home}#about`}>{copy.about}</a>{productSections.map(section => <a href={`${home}#${section.anchor}`}>{section[lang].label}</a>)}<a href={`${home}#careers`}>{copy.careers}</a></nav>
     <div class="footer-contact"><h2>{copy.contact}</h2><p class="department">{copy.department}</p><address>12764 Florence Avenue<br />Santa Fe Springs, CA 90670<br />{es ? 'Estados Unidos' : 'United States'}</address><a href="mailto:sales@artimex.com">sales@artimex.com <span aria-hidden="true">↗</span></a><p>{copy.phone}: <a href="tel:+15627770924">562-777-0924</a><br />FAX: 562-777-9607</p></div>
   </div>
   <div class="footer-bottom"><small>© {new Date().getFullYear()} Artimex Bakery.</small><nav aria-label={copy.privacy}><a href={privacy}>{copy.privacy}</a><a href={`${privacy}#privacy-rights`}>{copy.choices}</a></nav></div>

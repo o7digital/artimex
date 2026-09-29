@@ -1,0 +1,64 @@
+---
+interface Props {
+  lang: 'en' | 'es';
+  sections: Array<{
+    anchor: string;
+    audience: string;
+    en: { label: string; description: string };
+    es: { label: string; description: string };
+  }>;
+}
+const { lang, sections } = Astro.props;
+const es = lang === 'es';
+---
+<div class="nav-products" data-products-navigation>
+  <a href="#shop" class="nav-products-parent">{es ? 'Productos' : 'Products'}</a>
+  <button type="button" class="nav-products-toggle" aria-label={es ? 'Abrir submenú de productos' : 'Open products submenu'} aria-expanded="false" aria-controls="products-submenu">
+    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="m1 1.5 5 5 5-5" stroke="currentColor" stroke-width="1.25" /></svg>
+  </button>
+  <div class="products-submenu" id="products-submenu" hidden>
+    {sections.map(section => <a href={`#${section.anchor}`}><small>{section.audience}</small><strong>{section[lang].label}<span aria-hidden="true">↗</span></strong><p>{section[lang].description}</p></a>)}
+  </div>
+</div>
+
+<script>
+  const navigation = document.querySelector<HTMLElement>('[data-products-navigation]');
+  const toggle = navigation?.querySelector<HTMLButtonElement>('.nav-products-toggle');
+  const submenu = navigation?.querySelector<HTMLElement>('.products-submenu');
+
+  if (navigation && toggle && submenu) {
+    const setOpen = (open: boolean) => {
+      toggle.setAttribute('aria-expanded', String(open));
+      submenu.hidden = !open;
+    };
+    toggle.addEventListener('click', () => setOpen(submenu.hidden));
+    navigation.querySelector('.nav-products-parent')?.addEventListener('click', () => setOpen(false));
+    navigation.addEventListener('pointerenter', event => {
+      if (event.pointerType === 'mouse') setOpen(true);
+    });
+    navigation.addEventListener('pointerleave', () => {
+      if (!navigation.contains(document.activeElement)) setOpen(false);
+    });
+    navigation.addEventListener('focusout', event => {
+      const nextIsInside = event.relatedTarget instanceof Node && navigation.contains(event.relatedTarget);
+      if (!nextIsInside && !navigation.matches(':hover')) setOpen(false);
+    });
+    navigation.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && !submenu.hidden) {
+        event.preventDefault();
+        setOpen(false);
+        toggle.focus();
+      }
+      if (event.key === 'ArrowDown' && event.target instanceof Element && !submenu.contains(event.target)) {
+        event.preventDefault();
+        setOpen(true);
+        submenu.querySelector<HTMLAnchorElement>('a')?.focus();
+      }
+    });
+    submenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(false)));
+    document.addEventListener('click', event => {
+      if (event.target instanceof Node && !navigation.contains(event.target)) setOpen(false);
+    });
+    window.matchMedia('(max-width: 1100px)').addEventListener('change', () => setOpen(false));
+  }
+</script>

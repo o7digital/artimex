@@ -658,23 +658,6 @@ em { font-weight: 400; color: var(--orange); }
 .wholesale-actions { display: flex; align-items: center; gap: 25px; margin-top: 34px; }
 .text-link { font-size: 10px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; display: flex; align-items: center; gap: 12px; }
 
-.process { background: var(--paper); }
-.process-track { border-top: 1px solid var(--line); }
-.process-track article {
-  min-height: 120px;
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 25px;
-  align-items: center;
-  border-bottom: 1px solid var(--line);
-  transition: padding .2s ease, background .2s ease;
-}
-.process-track article:hover { padding: 0 18px; background: rgba(241,90,55,.045); }
-.process-track > article > span { color: var(--orange); font-size: 10px; font-weight: 900; }
-.process-track article > div { display: grid; grid-template-columns: minmax(170px,.55fr) 1fr; gap: 25px; align-items: baseline; }
-.process-track h3 { margin: 0; font-family: var(--serif); font-size: 34px; font-weight: 400; }
-.process-track p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.6; max-width: 600px; }
-
 .contact { padding-top: 0; background: var(--paper); }
 .contact-card {
   border-radius: 30px;
@@ -787,8 +770,6 @@ em { font-weight: 400; color: var(--orange); }
   .wholesale-grid { grid-template-columns: 1fr; max-width: 650px; }
   .wholesale-grid article { min-height: 160px; }
   .wholesale-grid h3 { margin-top: 28px; }
-  .process-track article { grid-template-columns: 50px 1fr; }
-  .process-track article > div { grid-template-columns: 1fr; gap: 8px; }
   .contact { padding-top: 0; }
   .contact-card { grid-template-columns: 1fr; }
   .careers { grid-template-columns: 1fr; }
@@ -834,8 +815,6 @@ em { font-weight: 400; color: var(--orange); }
   .wholesale h2, .contact h2 { font-size: clamp(48px, 14vw, 68px); }
   .wholesale-actions { flex-direction: column; align-items: flex-start; }
   .wholesale-actions .button { width: 100%; }
-  .process-track article { grid-template-columns: 35px 1fr; gap: 10px; padding: 20px 0; }
-  .process-track h3 { font-size: 28px; }
   .contact-copy { padding: 55px 24px; }
   .careers-visual { min-height: 120vw; }
   .careers-card { left: 20px; bottom: 20px; }

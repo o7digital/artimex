@@ -2,6 +2,7 @@
 import BrandLogo from './BrandLogo.astro';
 import BakeProcess from './BakeProcess.astro';
 import ShopExperience from './ShopExperience.jsx';
+import SiteFooter from './SiteFooter.astro';
 
 interface Props { lang: 'en' | 'es'; }
 const { lang } = Astro.props;
@@ -110,7 +111,7 @@ const nav = [[c.home, '#top'], [c.story, '#about'], [c.fresh, '#fresh-products']
 
     <section class="contact section" id="contact"><div class="contact-card"><div class="contact-copy"><p class="eyebrow light">{c.contactEye}</p><h2>{c.bring}<br/><em>{c.table}</em></h2><p>{c.contactText}</p></div><div class="contact-actions"><a href="mailto:sales@artimex.com"><small>{c.email}</small><strong>sales@artimex.com</strong><span>↗</span></a><a href="tel:+15627770924"><small>{c.call}</small><strong>562 777 0924</strong><span>↗</span></a><div><small>{c.visit}</small><strong>12764 Florence Avenue<br/>Santa Fe Springs, CA 90670</strong></div></div></div></section>
   </main>
-  <footer class="footer"><a class="brand footer-brand" href={localePath}><BrandLogo compact/></a><p>{c.footer}</p><div class="footer-links"><a href="#top">{c.home}</a><a href="#about">{c.story}</a><a href="#fresh-products">Fresh</a><a href="#frozen-products">Frozen</a><a href="#careers">{c.careers}</a><a href="#contact">{c.contact}</a></div><small>© {new Date().getFullYear()} Artimex Artisan Mexican Bakery.</small></footer>
+  <SiteFooter lang={lang} />
 </div>
 
 <script>

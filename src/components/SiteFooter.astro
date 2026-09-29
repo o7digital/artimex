@@ -1,0 +1,52 @@
+---
+import BrandLogo from './BrandLogo.astro';
+
+interface Props { lang: 'en' | 'es'; }
+const { lang } = Astro.props;
+const es = lang === 'es';
+const home = es ? '/es/' : '/';
+const privacy = es ? '/es/aviso-de-privacidad/' : '/privacy-notice/';
+const copy = es ? {
+  intro: 'Pan mexicano auténtico, hecho con oficio y creado para ser consistente.',
+  explore: 'Descubre Artimex', contact: 'Hablemos', department: 'Departamento de Ventas de Artimex Bakery',
+  home: 'Inicio', about: 'Sobre nosotros', fresh: 'Pan fresco', frozen: 'Mayoreo congelado', careers: 'Empleo',
+  privacy: 'Aviso de privacidad', choices: 'Tus opciones de privacidad', phone: 'Teléfono',
+} : {
+  intro: 'Authentic Mexican bread, made with craft and built for consistency.',
+  explore: 'Explore Artimex', contact: 'Let’s talk', department: 'Artimex Bakery Sales Department',
+  home: 'Home', about: 'About us', fresh: 'Fresh bakery', frozen: 'Frozen wholesale', careers: 'Careers',
+  privacy: 'Privacy notice', choices: 'Your privacy choices', phone: 'Phone',
+};
+---
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="footer-identity"><a class="brand" href={home}><BrandLogo compact /></a><p>{copy.intro}</p><span>Artimex Artisan Mexican Bakery</span></div>
+    <nav class="footer-explore" aria-label={copy.explore}><h2>{copy.explore}</h2><a href={home}>{copy.home}</a><a href={`${home}#about`}>{copy.about}</a><a href={`${home}#fresh-products`}>{copy.fresh}</a><a href={`${home}#frozen-products`}>{copy.frozen}</a><a href={`${home}#careers`}>{copy.careers}</a></nav>
+    <div class="footer-contact"><h2>{copy.contact}</h2><p class="department">{copy.department}</p><address>12764 Florence Avenue<br />Santa Fe Springs, CA 90670<br />{es ? 'Estados Unidos' : 'United States'}</address><a href="mailto:sales@artimex.com">sales@artimex.com <span aria-hidden="true">↗</span></a><p>{copy.phone}: <a href="tel:+15627770924">562-777-0924</a><br />FAX: 562-777-9607</p></div>
+  </div>
+  <div class="footer-bottom"><small>© {new Date().getFullYear()} Artimex Bakery.</small><nav aria-label={copy.privacy}><a href={privacy}>{copy.privacy}</a><a href={`${privacy}#privacy-rights`}>{copy.choices}</a></nav></div>
+</footer>
+
+<style>
+  .site-footer { padding: 58px 6vw 25px; background: #1c120e; color: var(--paper); border-top: 1px solid rgba(255,255,255,.14); }
+  .footer-main { display: grid; grid-template-columns: 1.1fr .65fr 1fr; gap: 8vw; padding-bottom: 40px; }
+  .footer-identity > p { max-width: 320px; margin: 23px 0 18px; color: #d4c4b3; font-family: var(--serif); font-size: 20px; line-height: 1.5; }
+  .footer-identity > span { color: #b9a492; font-size: 9px; line-height: 1.6; letter-spacing: .1em; text-transform: uppercase; }
+  h2 { margin: 0 0 24px; color: #efbc62; font-size: 10px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+  .footer-explore { display: flex; align-items: flex-start; flex-direction: column; gap: 13px; }
+  .footer-explore h2 { margin-bottom: 11px; }
+  .footer-explore > a { color: #e8dccc; font-size: 13px; line-height: 1.5; }
+  .footer-contact { font-size: 12px; line-height: 1.8; }
+  .footer-contact .department { margin: 0 0 12px; color: #e8dccc; font-weight: 650; }
+  address { margin-bottom: 16px; color: #c7b5a4; font-style: normal; }
+  .footer-contact > a { display: inline-flex; align-items: center; gap: 22px; font-size: 14px; }
+  .footer-contact > a span { color: #efbc62; }
+  .footer-contact > p:last-child { margin: 13px 0 0; color: #c7b5a4; }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 20px; padding-top: 23px; border-top: 1px solid rgba(255,255,255,.16); }
+  .footer-bottom small { color: #b9a492; font-size: 10px; line-height: 1.6; }
+  .footer-bottom nav { display: flex; flex-wrap: wrap; gap: 14px 28px; }
+  .footer-bottom a { font-size: 12px; line-height: 1.6; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: #8f7663; }
+  a:hover { color: #efbc62; }
+  @media (max-width: 820px) { .site-footer { padding: 45px 24px 26px; } .footer-main { grid-template-columns: 1fr 1fr; gap: 35px; } .footer-identity { grid-column: 1 / -1; } .footer-identity > p { max-width: 470px; } }
+  @media (max-width: 480px) { .footer-main { grid-template-columns: 1fr; gap: 34px; } .footer-explore { display: grid; grid-template-columns: 1fr 1fr; gap: 13px 18px; } .footer-explore h2 { grid-column: 1 / -1; } .footer-bottom { align-items: flex-start; flex-direction: column-reverse; } }
+</style>

@@ -709,20 +709,6 @@ em { font-weight: 400; color: var(--orange); }
 .careers-copy > p:not(.eyebrow) { max-width: 590px; margin: 32px 0; color: #c7d7d4; font-size: 15px; line-height: 1.75; }
 .careers-copy .button { width: fit-content; }
 
-.footer {
-  padding: 45px 6vw 35px;
-  display: grid;
-  grid-template-columns: 1fr 1fr auto;
-  gap: 30px;
-  align-items: center;
-  background: var(--cream);
-  border-top: 1px solid var(--line);
-}
-.footer-brand { grid-row: span 2; }
-.footer > p { margin: 0; color: var(--muted); font-family: var(--serif); font-size: 15px; }
-.footer-links { display: flex; justify-content: flex-end; gap: 18px; font-size: 10px; font-weight: 800; }
-.footer > small { grid-column: 2 / -1; color: #95857a; font-size: 8px; letter-spacing: .06em; }
-
 @media (max-width: 1100px) {
   .header { grid-template-columns: 1fr auto auto; }
   .nav { display: none; }
@@ -778,10 +764,6 @@ em { font-weight: 400; color: var(--orange); }
   .careers-copy { padding: 75px 35px; }
   .contact-copy { padding: 65px 35px; }
   .contact-actions { padding: 35px; }
-  .footer { grid-template-columns: 1fr; }
-  .footer-brand { grid-row: auto; }
-  .footer-links { justify-content: flex-start; }
-  .footer > small { grid-column: auto; }
 }
 
 @media (max-width: 560px) {
@@ -826,7 +808,6 @@ em { font-weight: 400; color: var(--orange); }
   .careers-copy .button { width: 100%; }
   .contact-actions { padding: 26px; }
   .contact-actions strong { font-size: 19px; }
-  .footer { padding: 35px 22px; }
 }
 
 /* Product presentation based on the approved Fresh / Frozen references. */
@@ -997,9 +978,6 @@ em { font-weight: 400; color: var(--orange); }
 .wholesale-grid article { border: 0; border-radius: 0; background: transparent; backdrop-filter: none; }
 .contact-card { border-radius: 0; background: #811428; }
 .contact-copy { background: #811428; }
-.footer { background: #1c120e; color: var(--cream); border-top: 1px solid rgba(255,255,255,.18); }
-.footer > p, .footer > small { color: #fff3e8; }
-.footer-links a { color: #fffaf2; }
 .contact-actions > * { border-bottom-color: rgba(255,255,255,.3); }
 .contact-actions > *:first-child { border-top-color: rgba(255,255,255,.3); }
 

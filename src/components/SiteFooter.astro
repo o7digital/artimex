@@ -12,12 +12,12 @@ const copy = es ? {
   intro: 'Pan mexicano auténtico, hecho con oficio y creado para ser consistente.',
   explore: 'Descubre Artimex', contact: 'Hablemos', department: 'Departamento de Ventas de Artimex Bakery',
   home: 'Inicio', about: 'Sobre nosotros', fresh: 'Pan fresco', frozen: 'Mayoreo congelado', careers: 'Empleo',
-  privacy: 'Aviso de privacidad', choices: 'Tus opciones de privacidad', phone: 'Teléfono',
+  privacy: 'Aviso de privacidad', phone: 'Teléfono',
 } : {
   intro: 'Authentic Mexican bread, made with craft and built for consistency.',
   explore: 'Explore Artimex', contact: 'Let’s talk', department: 'Artimex Bakery Sales Department',
   home: 'Home', about: 'About us', fresh: 'Fresh bakery', frozen: 'Frozen wholesale', careers: 'Careers',
-  privacy: 'Privacy notice', choices: 'Your privacy choices', phone: 'Phone',
+  privacy: 'Privacy notice', phone: 'Phone',
 };
 ---
 <footer class="site-footer">
@@ -26,7 +26,7 @@ const copy = es ? {
     <nav class="footer-explore" aria-label={copy.explore}><h2>{copy.explore}</h2><a href={home}>{copy.home}</a><a href={`${home}#about`}>{copy.about}</a>{productSections.map(section => <a href={`${home}#${section.anchor}`}>{section[lang].label}</a>)}<a href={`${home}#careers`}>{copy.careers}</a></nav>
     <div class="footer-contact"><h2>{copy.contact}</h2><p class="department">{copy.department}</p><address>12764 Florence Avenue<br />Santa Fe Springs, CA 90670<br />{es ? 'Estados Unidos' : 'United States'}</address><a href="mailto:sales@artimex.com">sales@artimex.com <span aria-hidden="true">↗</span></a><p>{copy.phone}: <a href="tel:+15627770924">562-777-0924</a><br />FAX: 562-777-9607</p></div>
   </div>
-  <div class="footer-bottom"><small>© {new Date().getFullYear()} Artimex Bakery.</small><nav aria-label={copy.privacy}><a href={privacy}>{copy.privacy}</a><a href={`${privacy}#privacy-rights`}>{copy.choices}</a></nav></div>
+  <div class="footer-bottom"><small>© {new Date().getFullYear()} Artimex Bakery.</small><nav aria-label={copy.privacy}><a href={privacy}>{copy.privacy}</a></nav></div>
 </footer>
 
 <style>
